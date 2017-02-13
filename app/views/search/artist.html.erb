@@ -1,0 +1,21 @@
+<h1>Artist Name: <%= @name %></h1>
+<img style="height: 300px; width: 300px;" src="<%=@imgurl %>"></img>
+<h3>Artist Releases</h3>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Type</th>
+  </tr>
+
+  <% @release_groups.each do |release_group| %>
+  <% if release_group.first_release_date < Date.today %>
+      <tr>
+        <td><%= release_group.title %></td>
+        <td><%= release_group.first_release_date %></td>
+        <td><%= release_group.type %></td>
+      </tr>
+    <%end%>
+  <%end %>
+</table

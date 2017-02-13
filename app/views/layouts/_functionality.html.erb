@@ -1,0 +1,16 @@
+<%=
+
+  def get_artist_image_url(id)
+    artist = MusicBrainz::Artist.find(id)
+    urls = artist.urls
+    if (urls[:image] != nil)
+      imgpageurl = urls[:image]
+      doc = Nokogiri::HTML(open(@imgpageurl))
+      @imgurl = doc.css('div#file').children.first.attributes["href"].value
+    else
+      return "todo"
+    end
+
+  end
+
+%>

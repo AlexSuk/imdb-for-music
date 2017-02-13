@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mbtest1</title>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/musicbrainz_config' %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p style="display: none"><%=
+
+     %></p>
+    <%= yield %>
+  </body>
+</html>
