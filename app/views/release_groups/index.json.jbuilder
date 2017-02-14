@@ -1,0 +1,1 @@
+json.array! @release_groups, partial: 'release_groups/release_group', as: :release_group
