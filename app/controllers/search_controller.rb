@@ -10,7 +10,6 @@ class SearchController < ApplicationController
     @albums = MusicBrainz::ReleaseGroup.search("", @query)
   end
 
-  # ex: Nightwish
   def artist
 
     @artist = MusicBrainz::Artist.find(params["format"])
@@ -20,7 +19,7 @@ class SearchController < ApplicationController
     @end_date = @artist.date_end
     @id = @artist.id
 
-    # TODO this scraping is shit 
+    # TODO this scraping is shit
     @imgpageurl = @artist.urls[:image]
     if (@imgpageurl != nil)
       doc = Nokogiri::HTML(open(@imgpageurl))
