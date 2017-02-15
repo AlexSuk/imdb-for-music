@@ -1,0 +1,478 @@
+Started GET "/" for 127.0.0.1 at 2017-02-15 14:26:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#index as HTML
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 315ms (Views: 304.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-02-15 14:31:02 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1729ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:31:10 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"00a9f935-ba93-4fc8-a33a-993abe9c936b"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 23ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=00a9f935-ba93-4fc8-a33a-993abe9c936b):
+  
+app/controllers/artists_controller.rb:67:in `set_artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.3ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-02-15 14:32:36 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1752ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:32:39 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 2321ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:47:57 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 2006ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:54:49 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 2137ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:54:55 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 2147ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-02-15 14:55:06 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.9ms)
+Completed 200 OK in 1756ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:55:10 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"00a9f935-ba93-4fc8-a33a-993abe9c936b"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=00a9f935-ba93-4fc8-a33a-993abe9c936b):
+  
+app/controllers/artists_controller.rb:67:in `set_artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-02-15 14:57:00 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.8ms)
+Completed 200 OK in 1748ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:57:03 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"00a9f935-ba93-4fc8-a33a-993abe9c936b"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=00a9f935-ba93-4fc8-a33a-993abe9c936b):
+  
+app/controllers/artists_controller.rb:67:in `set_artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:57:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered collection of /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (2.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.4ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.3ms)
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:58:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (3.4ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.3ms)
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:58:35 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"00a9f935-ba93-4fc8-a33a-993abe9c936b"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=00a9f935-ba93-4fc8-a33a-993abe9c936b):
+  
+app/controllers/artists_controller.rb:67:in `set_artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 14:59:06 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"00a9f935-ba93-4fc8-a33a-993abe9c936b"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=00a9f935-ba93-4fc8-a33a-993abe9c936b):
+  
+app/controllers/artists_controller.rb:67:in `set_artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.7ms)
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 15:09:23 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"00a9f935-ba93-4fc8-a33a-993abe9c936b"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=00a9f935-ba93-4fc8-a33a-993abe9c936b):
+  
+app/controllers/artists_controller.rb:67:in `set_artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+Started GET "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 15:09:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artists/00a9f935-ba93-4fc8-a33a-993abe9c936b"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (3.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.4ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-02-15 15:09:49 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.8ms)
+Completed 200 OK in 1747ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-02-15 15:09:54 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 2434ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-02-15 15:11:09 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.2ms)
+Completed 200 OK in 1729ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.eb380962-99bb-46c0-af40-1c7790a7822a" for 127.0.0.1 at 2017-02-15 15:11:12 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 2008ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=salyer&commit=Submit" for 127.0.0.1 at 2017-02-15 15:11:25 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"salyer", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.8ms)
+Completed 200 OK in 1761ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=slayer&commit=Submit" for 127.0.0.1 at 2017-02-15 15:11:33 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"slayer", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.9ms)
+Completed 200 OK in 1768ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.72de5171-38cf-4734-bc8a-6ac374dea523" for 127.0.0.1 at 2017-02-15 15:11:37 -0500
+Processing by SearchController#artist as 
+Started GET "/artist.72de5171-38cf-4734-bc8a-6ac374dea523" for 127.0.0.1 at 2017-02-15 15:11:38 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.7ms)
+Completed 200 OK in 1772ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.0ms)
+Completed 200 OK in 1779ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.bdacc37b-8633-4bf8-9dd5-4662ee651aec" for 127.0.0.1 at 2017-02-15 15:11:47 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 2266ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.72de5171-38cf-4734-bc8a-6ac374dea523" for 127.0.0.1 at 2017-02-15 15:12:22 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1742ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.8869f326-16e0-4a88-aa8a-bc6fd4db2fe0" for 127.0.0.1 at 2017-02-15 15:12:29 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1777ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.ab38acff-be19-464e-a930-57d7a952aa54" for 127.0.0.1 at 2017-02-15 15:12:48 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.5ms)
+Completed 200 OK in 1755ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.a855f4f8-73ae-41c0-912e-2dd9c54ee2d8" for 127.0.0.1 at 2017-02-15 15:12:57 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1761ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=muse&commit=Submit" for 127.0.0.1 at 2017-02-15 15:26:09 -0500
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"muse", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 1812ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.fd857293-5ab8-40de-b29e-55a69d4e4d0f" for 127.0.0.1 at 2017-02-15 15:26:14 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1800ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.3b853780-f81f-42e7-b430-4beb5dc7eecf" for 127.0.0.1 at 2017-02-15 15:26:23 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.7ms)
+Completed 200 OK in 1792ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.1695c115-bf3f-4014-9966-2b0c50179193" for 127.0.0.1 at 2017-02-15 15:26:30 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.3ms)
+Completed 200 OK in 1762ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.deb622cb-ef78-448c-9f2d-28cc255e08ce" for 127.0.0.1 at 2017-02-15 15:26:41 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.7ms)
+Completed 200 OK in 1767ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.deb622cb-ef78-448c-9f2d-28cc255e08ce" for 127.0.0.1 at 2017-02-15 15:47:21 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.5ms)
+Completed 200 OK in 1763ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.1695c115-bf3f-4014-9966-2b0c50179193" for 127.0.0.1 at 2017-02-15 15:47:27 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.7ms)
+Completed 200 OK in 1767ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.3b853780-f81f-42e7-b430-4beb5dc7eecf" for 127.0.0.1 at 2017-02-15 15:47:32 -0500
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.5ms)
+Completed 200 OK in 1789ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
