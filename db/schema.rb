@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213235857) do
+ActiveRecord::Schema.define(version: 20170305001752) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170213235857) do
     t.string   "image_url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "artist_id"
   end
 
   create_table "releases", force: :cascade do |t|
