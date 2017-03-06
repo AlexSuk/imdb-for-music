@@ -2,8 +2,9 @@ require 'byebug'
 require 'uri'
 require 'net/http'
 require 'json'
-	
+
 	module  Musicbrainz_db
+
 		def self.http_req path
 			url = "http://musicbrainz.org/ws/2/"+path+"&fmt=json"
 			uri = URI.parse(url)
@@ -15,6 +16,7 @@ require 'json'
 			}
 			res
 		end
+=begin
 		def Musicbrainz_db.search artist, album, track
 			#specify up to 2 criteria. For some reason if 3 are specified, the last one is not searched
 			#option 0 = artist only
@@ -34,10 +36,19 @@ require 'json'
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
 		end
+=end
+		# @param {String} type May be "artist", "release-group", "recording"
+		def Musicbrainz_db.search type, string
+			path = type + "/?query=" + string
+			res = Musicbrainz_db.http_req path
+			response = JSON::parse res.body
+			return response["#{type}s"]
+		end
+=begin
 		def Musicbrainz_db.find_with_id option, id
 			#option 0 = release group
 			#option 1 = artist
-			#option 2 = release 
+			#option 2 = release
 			if(option==0)
 				path="release-group/" + id +"?inc=artist-credits+releases"
 			elsif(option==1)
@@ -48,8 +59,24 @@ require 'json'
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
 		end
+=end
+		# @param {String} type May be "artist", "release-group", "recording"
+		# @param {String} id The MBID of the item to find
+		def Musicbrainz_db.find type, id
+			path = type + "/" + id
+			if type == "artist"
+				path += "?inc=release-groups"
+			elsif type == "release-group"
+				path += "?inc=artists+releases"
+			elsif type == "recording"
+				path += "?inc=artists+releases"
+			end
+			res = Musicbrainz_db.http_req path
+			response = JSON::parse res.body
+		end
+
 	end
-  
+
 =begin
 usage examples:
 Musicbrainz_db.search  "Metallica", nil, "fuel"

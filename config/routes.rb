@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :release_groups
+  #resources :release_groups
   #resources :artists
   root "search#index"
   get '/artist', to: 'search#artist'
