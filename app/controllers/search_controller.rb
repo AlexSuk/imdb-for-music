@@ -19,6 +19,7 @@ class SearchController < ApplicationController
     @end_date = @artist.date_end
     @id = @artist.id
 
+=begin
     # TODO this scraping is shit
     @imgpageurl = @artist.urls[:image]
     if (@imgpageurl != nil)
@@ -29,7 +30,7 @@ class SearchController < ApplicationController
       doc = Nokogiri::HTML(open(@imgpageurl))
       @imgurl = "https:" + doc.xpath('//table[starts-with(@class, "infobox")]').css("img").first.attributes["src"].value
     end
-
+=end
 
 
     @release_groups = @artist.release_groups
