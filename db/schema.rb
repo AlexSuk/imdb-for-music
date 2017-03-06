@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170305011847) do
+ActiveRecord::Schema.define(version: 20170306010252) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -38,10 +38,11 @@ ActiveRecord::Schema.define(version: 20170305011847) do
     t.string   "name"
     t.date     "release_date"
     t.string   "country"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "artist_id"
     t.string   "mbid"
+    t.integer  "releasegroup_id"
   end
 
   create_table "tracks", force: :cascade do |t|
