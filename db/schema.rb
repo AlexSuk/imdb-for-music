@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307193519) do
+ActiveRecord::Schema.define(version: 20170307201836) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170307193519) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.index [nil], name: "index_users_on_email", unique: true
   end
 
 end
