@@ -32,7 +32,6 @@ class ArtistTest < ActiveSupport::TestCase
       Artist.create(name: "SameMBID as Artist in before block", mbid: "c9f91cdc-984e-4303-9a51-4ac0dfa2348f")
       Artist.count.must_equal 1
     end
-
   end
 
 end
