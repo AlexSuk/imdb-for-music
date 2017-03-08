@@ -5,6 +5,8 @@ class ReleaseGroupsControllerTest < ActionDispatch::IntegrationTest
     @release_group = release_groups(:one)
   end
 
+=begin
+
   test "should get index" do
     get release_groups_url
     assert_response :success
@@ -45,4 +47,5 @@ class ReleaseGroupsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to release_groups_url
   end
+=end
 end
