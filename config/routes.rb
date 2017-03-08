@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :users
   #resources :release_groups
   #resources :artists
   root "search#index"
