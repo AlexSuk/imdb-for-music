@@ -35,6 +35,13 @@ gem 'musicbrainz'
 
 gem 'nokogiri'
 
+# gems for bootstrap
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'bootstrap-sass',          '3.3.6'
+
+# allows for testing controllers
+gem 'rails-controller-testing'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
