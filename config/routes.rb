@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :reviews
   resources :users
-  resources :posts
+  resources :posts do
+    member do
+      get 'reply'
+    end
+  end
+
   #resources :release_groups
   #resources :artists
   root "search#index"

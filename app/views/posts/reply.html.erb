@@ -1,0 +1,47 @@
+<h1>New Reply</h1>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @post.comment %>
+</p>
+
+<p>
+  <strong>User_ID:</strong>
+  <%= @post.user_id %>
+</p>
+
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"New Comment" %>
+    <%= f.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :"Add Comment" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', posts_path %>

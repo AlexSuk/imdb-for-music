@@ -25,6 +25,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def reply
+    @post = Post.find(params[:id])
+  end
+
   def post_params
     params.require(:post).permit(:title, :comment, :user_id)
   end
