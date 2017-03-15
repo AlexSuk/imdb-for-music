@@ -9,13 +9,13 @@
     <th>Type</th>
   </tr>
 
-  <% @release_groups.each do |release_group| %>
-  <% if release_group.first_release_date < Date.today %>
+  <% @release_groups.each do |release_group|%>
+  <% #if release_group["first-release-date"] && Date.parse(release_group["first-release-date"]) < Date.today %>
       <tr>
-        <td><%= release_group.title %></td>
-        <td><%= release_group.first_release_date %></td>
-        <td><%= release_group.type %></td>
+        <td><%= release_group["title"] %></td>
+        <td><%= release_group["first-release-date"] %></td>
+        <td><%= release_group["type"] %></td>
       </tr>
-    <%end%>
+    <% #end%>
   <%end %>
 </table

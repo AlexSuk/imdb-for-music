@@ -35,7 +35,7 @@ class SearchController < ApplicationController
 =end
 
 
-    @release_groups = @artist["release_groups"]
+    @release_groups = @artist["release-groups"]
     byebug
   end
 

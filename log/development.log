@@ -3960,3 +3960,243 @@ puma (3.7.0) lib/puma/server.rb:275:in `block in run'
 puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
   Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-15 15:35:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#index as HTML
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_musicbrainz_config.html.erb (1.2ms)
+Completed 200 OK in 336ms (Views: 326.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-15 15:35:15 -0400
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (21.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 660ms (Views: 150.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:35:28 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     <th>Type</th>
+    10:   </tr>
+    11: 
+    12:   <% @release_groups.each do |release_group| %>
+    13:   <% if release_group.first_release_date < Date.today %>
+    14:       <tr>
+    15:         <td><%= release_group.title %></td>
+  
+app/views/search/artist.html.erb:12:in `_app_views_search_artist_html_erb__3408041526976015685_70333143001300'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:35:59 -0400
+Processing by SearchController#artist as 
+Completed 500 Internal Server Error in 45881ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/search_controller.rb:40:in `artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (109.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.4ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:36:54 -0400
+Processing by SearchController#artist as 
+Completed 500 Internal Server Error in 3808ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/search_controller.rb:40:in `artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (149.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (48.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (237.9ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:37:06 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (313.3ms)
+Completed 500 Internal Server Error in 686ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_release_date' for #<Hash:0x007fef69ef4f88>):
+    10:   </tr>
+    11: 
+    12:   <% @release_groups.each do |release_group| %>
+    13:   <% if release_group.first_release_date < Date.today %>
+    14:       <tr>
+    15:         <td><%= release_group.title %></td>
+    16:         <td><%= release_group.first_release_date %></td>
+  
+app/views/search/artist.html.erb:13:in `block in _app_views_search_artist_html_erb__3408041526976015685_70333125129420'
+app/views/search/artist.html.erb:12:in `each'
+app/views/search/artist.html.erb:12:in `_app_views_search_artist_html_erb__3408041526976015685_70333125129420'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (224.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (57.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.4ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (320.2ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:38:17 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:38:48 -0400
+Processing by SearchController#artist as 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:42:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:43:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:43:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:44:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 3445ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (comparison of String with Date failed):
+    10:   </tr>
+    11: 
+    12:   <% @release_groups.each do |release_group|%>
+    13:   <% if release_group["first-release-date"] && release_group["first-release-date"] < Date.today %>
+    14:       <tr>
+    15:         <td><%= release_group.title %></td>
+    16:         <td><%= release_group.first_release_date %></td>
+  
+app/views/search/artist.html.erb:13:in `<'
+app/views/search/artist.html.erb:13:in `block in _app_views_search_artist_html_erb___2017900716576355562_47332052103960'
+app/views/search/artist.html.erb:12:in `each'
+app/views/search/artist.html.erb:12:in `_app_views_search_artist_html_erb___2017900716576355562_47332052103960'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:45:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+Completed 500 Internal Server Error in 31145ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/search_controller.rb:40:in `artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (111.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (174.7ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:46:00 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 4631ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Hash:0x00555681ceb6e8>):
+    12:   <% @release_groups.each do |release_group|%>
+    13:   <% if release_group["first-release-date"] && Date.parse(release_group["first-release-date"]) < Date.today %>
+    14:       <tr>
+    15:         <td><%= release_group.title %></td>
+    16:         <td><%= release_group.first_release_date %></td>
+    17:         <td><%= release_group.type %></td>
+    18:       </tr>
+  
+app/views/search/artist.html.erb:15:in `block in _app_views_search_artist_html_erb__3726463817617978242_46915036301280'
+app/views/search/artist.html.erb:12:in `each'
+app/views/search/artist.html.erb:12:in `_app_views_search_artist_html_erb__3726463817617978242_46915036301280'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:46:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 4242ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (invalid date):
+    10:   </tr>
+    11: 
+    12:   <% @release_groups.each do |release_group|%>
+    13:   <% if release_group["first-release-date"] && Date.parse(release_group["first-release-date"]) < Date.today %>
+    14:       <tr>
+    15:         <td><%= release_group["title"] %></td>
+    16:         <td><%= release_group["first-release-date"] %></td>
+  
+app/views/search/artist.html.erb:13:in `parse'
+app/views/search/artist.html.erb:13:in `block in _app_views_search_artist_html_erb___3538531797905782120_47410296938940'
+app/views/search/artist.html.erb:12:in `each'
+app/views/search/artist.html.erb:12:in `_app_views_search_artist_html_erb___3538531797905782120_47410296938940'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-15 15:48:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 3878ms (Views: 267.3ms | ActiveRecord: 0.0ms)
+
+
