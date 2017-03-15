@@ -12,7 +12,7 @@
   <% @artists.each do |artist| %>
     <tr>
       <td>
-        <%= link_to artist[:name], artist_path(artist[:id])%>
+        <%= link_to artist["name"], artist_path(artist["id"])%>
       </td>
       <td><%= "todo"
        %></td>
@@ -34,7 +34,7 @@
 
   <% @albums.each do |album| %>
     <tr>
-      <td><%= album[:title] %></td>
+      <td><%= album["title"] %></td>
       <td><%=
       #release_group = MusicBrainz::ReleaseGroup.find(album[:id])
       #release_group.first_release_date
@@ -44,7 +44,7 @@
         todo
       </td>
       <td><%= 'todo' %></td>
-      <td><%= album[:type] %></td>
+      <td><%= album["type"] %></td>
     </tr>
   <%end %>
 </table>
