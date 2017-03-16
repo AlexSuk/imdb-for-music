@@ -1,7 +1,7 @@
 <div id="site_header">
   <h1> IMDB For Music <h1>
     <%= form_tag(search_path(:q), method: :get) do %>
-      <%= text_field_tag :q, params[:name], placeholder: "Search Music", class: "left" %>
-      <%= submit_tag "Submit" %>
+      <%= text_field_tag :q, params[:name], placeholder: "Search Music", id: "searchbar", class: "left" %>
+      <%= submit_tag "Submit", id: "searchbutton" %>
     <% end %>
 </div>
