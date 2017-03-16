@@ -14,7 +14,9 @@
       <tr>
         <td><%= release_group["title"] %></td>
         <td><%= release_group["first-release-date"] %></td>
-        <td><%= release_group["type"] %></td>
+        <td> <%= release_group["secondary-types"].empty? ?
+        release_group["primary-type"] :
+        release_group["secondary-types"].first %> </td>
       </tr>
     <% #end%>
   <%end %>

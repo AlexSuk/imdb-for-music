@@ -7,7 +7,6 @@ class SearchController < ApplicationController
 
   def search
     @query = params[:q]
-    #@artists = MusicBrainz::Artist.search(@query)
     @artists = Musicbrainz_db.search("artist", @query)
     @albums = Musicbrainz_db.search("release-group", @query)
   end
@@ -19,7 +18,7 @@ class SearchController < ApplicationController
     @country = @artist["country"]
     #@start_date = @artist.date_begin
     #@end_date = @artist.date_end
-    @id = @artist["id"]
+    @id = @artist["id"] # note this is the MusicBrainz-assigned id, not the rails assigned one
 
 =begin
     # TODO this scraping is shit
@@ -36,7 +35,6 @@ class SearchController < ApplicationController
 
 
     @release_groups = @artist["release-groups"]
-    byebug
   end
 
 end

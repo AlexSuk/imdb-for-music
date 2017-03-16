@@ -4200,3 +4200,243 @@ Processing by SearchController#artist as
 Completed 200 OK in 3878ms (Views: 267.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:07:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+Completed 500 Internal Server Error in 15408ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/search_controller.rb:40:in `artist'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (102.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (164.2ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:08:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 3557ms (Views: 297.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:08:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:11:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4670ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:17: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+up["secondary-types"].empty? );@output_buffer.safe_append='
+                              ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:19: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;           else 
+                        ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+  end 
+     ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/search/artist.html.erb:17: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/search/artist.html.erb:19: syntax error, unexpected keyword_else, expecting ')'
+app/views/search/artist.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+app/views/search/artist.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+app/views/search/artist.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/search/artist.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.7ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:13:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5157ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:18: syntax error, unexpected '<'
+          <td><%= release_group["primary-
+           ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+          <td><%= release-group["secondary-types"].firs
+                         ^):
+  
+app/views/search/artist.html.erb:18: syntax error, unexpected '<'
+app/views/search/artist.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:14:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 2261ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:18: syntax error, unexpected '<'
+          <td> release_group["primary-typ
+           ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:18: syntax error, unexpected ':', expecting ')'
+elease_group["primary-type"] :
+                              ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:20: unknown regexp options - tr
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:20: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+      </
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:23: unterminated regexp meets end of file
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:23: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/search/artist.html.erb:18: syntax error, unexpected '<'
+app/views/search/artist.html.erb:18: syntax error, unexpected ':', expecting ')'
+app/views/search/artist.html.erb:20: unknown regexp options - tr
+app/views/search/artist.html.erb:20: unmatched close parenthesis: /td> );@output_buffer.safe_append='
+app/views/search/artist.html.erb:23: unterminated regexp meets end of file
+app/views/search/artist.html.erb:23: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:15:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 3419ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:18: syntax error, unexpected '<'
+          <td> release_group["primary-typ
+           ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:18: syntax error, unexpected ':', expecting ')'
+elease_group["primary-type"] :
+                              ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:21: unknown regexp options - td
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:21: unmatched close parenthesis: /td> );@output_buffer.safe_append='-->
+
+        <td> '.freeze;@output_buffer.append=( release_group["secondary-types"].empty? );@output_buffer.safe_append=' </
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:22: syntax error, unexpected '<'
+      </tr>
+       ^
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:25: unknown regexp options - tabl
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:26: unterminated string meets end of file
+/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/app/views/search/artist.html.erb:26: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/search/artist.html.erb:18: syntax error, unexpected '<'
+app/views/search/artist.html.erb:18: syntax error, unexpected ':', expecting ')'
+app/views/search/artist.html.erb:21: unknown regexp options - td
+app/views/search/artist.html.erb:21: unmatched close parenthesis: /td> );@output_buffer.safe_append='-->
+app/views/search/artist.html.erb:22: syntax error, unexpected '<'
+app/views/search/artist.html.erb:25: unknown regexp options - tabl
+app/views/search/artist.html.erb:26: unterminated string meets end of file
+app/views/search/artist.html.erb:26: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:16:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 2824ms (Views: 193.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:16:51 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (114.9ms)
+Completed 500 Internal Server Error in 6347ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `salmon' for #<#<Class:0x007fa63c789300>:0x007fa63c7914d8>):
+    15:         <td><%= release_group["title"] %></td>
+    16:         <td><%= release_group["first-release-date"] %></td>
+    17: 
+    18:         <td> <%= release_group["secondary-types"].empty? ? eggs : salmon%> </td>
+    19:       </tr>
+    20:     <% #end%>
+    21:   <%end %>
+  
+app/views/search/artist.html.erb:18:in `block in _app_views_search_artist_html_erb___1091135973096181162_70175977918780'
+app/views/search/artist.html.erb:12:in `each'
+app/views/search/artist.html.erb:12:in `_app_views_search_artist_html_erb___1091135973096181162_70175977918780'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:17:12 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.4ms)
+Completed 200 OK in 3805ms (Views: 154.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:17:46 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.7ms)
+Completed 200 OK in 4332ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:18:08 -0400
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.7ms)
+Completed 200 OK in 2055ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:18:14 -0400
+Processing by SearchController#artist as 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-16 16:19:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#artist as 
+  Rendering search/artist.html.erb within layouts/application
+  Rendered search/artist.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_musicbrainz_config.html.erb (0.6ms)
+Completed 200 OK in 4389ms (Views: 279.4ms | ActiveRecord: 0.0ms)
+
+
