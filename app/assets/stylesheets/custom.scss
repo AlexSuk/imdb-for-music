@@ -46,3 +46,15 @@ input {
   margin-top: 45px;
   @include box_sizing;
 }
+
+.left {
+  float: left;
+}
+
+/* header */
+
+#site_header {
+  width: 100%;
+  color: white;
+  background-color: gray;
+}
