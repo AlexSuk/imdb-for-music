@@ -1,6 +1,6 @@
 require './lib/dbquery'
 
-class SearchController < ApplicationController
+class StaticPagesController < ApplicationController
 
   def index
   end
@@ -11,6 +11,7 @@ class SearchController < ApplicationController
     @albums = Musicbrainz_db.search("release-group", @query)
   end
 
+  # TODO this should not be a static page
   def artist
 
     @artist = Musicbrainz_db.find("artist",params["format"])
@@ -34,7 +35,7 @@ class SearchController < ApplicationController
 =end
 
 
-    @release_groups = @artist["release-groups"]
+    @release_groups = @artist["release-groups"].sort_by { |hash| hash['first-release-date']}
   end
 
 end
