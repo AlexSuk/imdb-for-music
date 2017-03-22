@@ -1,1 +1,0 @@
-json.partial! "release_groups/release_group", release_group: @release_group

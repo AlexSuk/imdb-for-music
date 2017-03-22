@@ -10,19 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170311175101) do
-
-  create_table "artists", force: :cascade do |t|
-    t.string   "name"
-    t.string   "group_type"
-    t.string   "image_url"
-    t.string   "country"
-    t.date     "date_started"
-    t.date     "date_ended"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "mbid"
-  end
+ActiveRecord::Schema.define(version: 20170322193942) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -37,39 +25,11 @@ ActiveRecord::Schema.define(version: 20170311175101) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "release_groups", force: :cascade do |t|
-    t.string   "name"
-    t.string   "record_label"
-    t.string   "image_url"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "artist_id"
-    t.string   "mbid"
-  end
-
-  create_table "releases", force: :cascade do |t|
-    t.string   "name"
-    t.date     "release_date"
-    t.string   "country"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "artist_id"
-    t.string   "mbid"
-    t.integer  "releasegroup_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.string   "review"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "tracks", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "release_id"
   end
 
   create_table "users", force: :cascade do |t|
