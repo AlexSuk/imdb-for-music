@@ -5140,3 +5140,13 @@ Processing by StaticPagesController#artist as
 Completed 200 OK in 430ms (Views: 101.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/artist.00a9f935-ba93-4fc8-a33a-993abe9c936b" for 127.0.0.1 at 2017-03-22 15:02:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#artist as 
+  Rendering static_pages/artist.html.erb within layouts/application
+  Rendered static_pages/artist.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1708ms (Views: 1370.4ms | ActiveRecord: 0.0ms)
+
+
