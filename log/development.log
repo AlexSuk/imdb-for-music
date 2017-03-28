@@ -5150,3 +5150,561 @@ Processing by StaticPagesController#artist as
 Completed 200 OK in 1708ms (Views: 1370.4ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/1" for 127.0.0.1 at 2017-03-22 15:08:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 52.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-28 15:50:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1490ms (Views: 1481.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 15:53:11 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 670ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.95e1ead9-4d31-4808-a7ac-32c3614c116b" for 127.0.0.1 at 2017-03-28 15:53:14 -0400
+Processing by StaticPagesController#artist as 
+  Rendering static_pages/artist.html.erb within layouts/application
+  Rendered static_pages/artist.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 309ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.4665e836-2c96-4569-9462-bfea34850b69" for 127.0.0.1 at 2017-03-28 15:53:25 -0400
+Processing by StaticPagesController#artist as 
+  Rendering static_pages/artist.html.erb within layouts/application
+  Rendered static_pages/artist.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 261ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 15:53:50 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 15:55:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 15:56:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 15:57:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1814ms (Views: 1212.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=Nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 15:57:34 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1160ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=Slayer&commit=Submit" for 127.0.0.1 at 2017-03-28 15:57:39 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Slayer", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 669ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=Kamelot&commit=Submit" for 127.0.0.1 at 2017-03-28 15:57:50 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Kamelot", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 502ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 15:58:04 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 581ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 15:58:23 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 15:59:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:00:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:00:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:01:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:02:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:03:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:04:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 1715ms (Views: 1182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=kyle+landry&commit=Submit" for 127.0.0.1 at 2017-03-28 16:04:46 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"kyle landry", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 462ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 16:05:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 16:06:41 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 575ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:07:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 6262ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+lib/dbquery.rb:27:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (91.6ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (156.0ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:08:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:09:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:10:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:11:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:17:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 11503ms (Views: 1237.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:17:39 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 25099ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+lib/dbquery.rb:28:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (99.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (154.5ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:18:06 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 5204ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:18:30 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:20:00 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:20:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 42155ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+lib/dbquery.rb:31:in `block in search'
+lib/dbquery.rb:28:in `each'
+lib/dbquery.rb:28:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (111.3ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (175.7ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:21:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-28 16:21:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1671ms (Views: 1239.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-28 16:21:43 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5471ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=slayer&commit=Submit" for 127.0.0.1 at 2017-03-28 16:21:54 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"slayer", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 436ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=drake&commit=Submit" for 127.0.0.1 at 2017-03-28 16:22:01 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"drake", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 435ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=mozart&commit=Submit" for 127.0.0.1 at 2017-03-28 16:22:12 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mozart", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5451ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=wolfgang&commit=Submit" for 127.0.0.1 at 2017-03-28 16:22:28 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"wolfgang", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 854ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=amadeus+mozart&commit=Submit" for 127.0.0.1 at 2017-03-28 16:22:33 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amadeus mozart", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 444ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=hadyn&commit=Submit" for 127.0.0.1 at 2017-03-28 16:22:52 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"hadyn", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5455ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=Joseph+Haydn&commit=Submit" for 127.0.0.1 at 2017-03-28 16:23:04 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Joseph Haydn", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 544ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=beyonce&commit=Submit" for 127.0.0.1 at 2017-03-28 16:23:08 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"beyonce", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 961ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=abba&commit=Submit" for 127.0.0.1 at 2017-03-28 16:23:19 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"abba", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 451ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=sabaton&commit=Submit" for 127.0.0.1 at 2017-03-28 16:23:32 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"sabaton", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 444ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.39a31de6-763d-48b6-a45c-f7cfad58ffd8" for 127.0.0.1 at 2017-03-28 16:23:34 -0400
+Processing by StaticPagesController#artist as 
+  Rendering static_pages/artist.html.erb within layouts/application
+  Rendered static_pages/artist.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 304ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=epica&commit=Submit" for 127.0.0.1 at 2017-03-28 16:23:41 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"epica", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 463ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=cenotaph&commit=Submit" for 127.0.0.1 at 2017-03-28 16:25:59 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"cenotaph", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 419ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=job+for+a+&commit=Submit" for 127.0.0.1 at 2017-03-28 16:26:08 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"job for a ", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 482ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:26:43 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:27:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:28:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:29:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:29:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 36851ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/static_pages_controller.rb:13:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (109.1ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.6ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (172.5ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:33:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 5313ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    41:       %>
+    42:       </td>
+    43:       <td>
+    44:         <%= album["artist-credit"]["name"] %>
+    45:       </td>
+    46:       <td><%= 'todo' %></td>
+    47:       <td><%= album["type"] %></td>
+  
+app/views/static_pages/search.html.erb:44:in `[]'
+app/views/static_pages/search.html.erb:44:in `block in _app_views_static_pages_search_html_erb___1134110192211578320_70029647005060'
+app/views/static_pages/search.html.erb:35:in `each'
+app/views/static_pages/search.html.erb:35:in `_app_views_static_pages_search_html_erb___1134110192211578320_70029647005060'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:33:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Completed   in 149187ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:36:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 11735ms (Views: 1198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:36:45 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:37:53 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=nightwish&commit=Submit" for 127.0.0.1 at 2017-03-28 16:38:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"nightwish", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4758ms (Views: 1217.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:38:27 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:39:28 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:40:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:41:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}

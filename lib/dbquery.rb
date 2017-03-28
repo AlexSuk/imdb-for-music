@@ -18,11 +18,21 @@ require 'json'
 		end
 
 		# @param {String} type May be "artist", "release-group", "recording"
+		# @param {String} string The string to search
 		def Musicbrainz_db.search type, string
 			path = type + "/?query=" + string
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
-			return response["#{type}s"]
+			# FILTER BY SCORE
+			arr = []
+			response = response["#{type}s"]
+			response.each do |obj|
+				if obj["score"] == "100"
+					arr << obj
+				end
+			end
+			return arr
+			#return response["#{type}s"]
 		end
 
 		# @param {String} type May be "artist", "release-group", "recording"

@@ -6,7 +6,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Thumbnail</th>
+    <th>Description</th>
     <th>Type</th>
   </tr>
 
@@ -15,9 +15,8 @@
       <td>
         <%= link_to artist["name"], artist_path(artist["id"])%>
       </td>
-      <td><%= "todo"
-       %></td>
-      <td><%= artist[:type] %></td>
+      <td><%= artist["disambiguation"] %></td>
+      <td><%= artist["type"] %></td>
     </tr>
   <%end %>
 </table>
@@ -42,7 +41,7 @@
       %>
       </td>
       <td>
-        todo
+        <%= album["artist-credit"].first["artist"]["name"] %>
       </td>
       <td><%= 'todo' %></td>
       <td><%= album["type"] %></td>
