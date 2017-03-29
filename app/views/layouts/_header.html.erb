@@ -4,4 +4,9 @@
       <%= text_field_tag :q, params[:name], placeholder: "Search Music", id: "searchbar", class: "left" %>
       <%= submit_tag "Submit", id: "searchbutton" %>
     <% end %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Log In",   login_path %></li>
+      </ul>
+    </nav>
 </div>
