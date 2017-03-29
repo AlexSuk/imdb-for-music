@@ -9,7 +9,6 @@ class StaticPagesController < ApplicationController
     @query = params[:q]
     @artists = Musicbrainz_db.search("artist", @query)
     @albums = Musicbrainz_db.search("release-group", @query)
-    byebug
   end
 
   # TODO this should not be a static page

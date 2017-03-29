@@ -5708,3 +5708,330 @@ Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 a
   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by StaticPagesController#search as HTML
   Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:47:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:48:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-28 16:48:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4519ms (Views: 1199.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+nexus&commit=Submit" for 127.0.0.1 at 2017-03-28 16:49:01 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the nexus", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 2637ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-28 16:49:15 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3373ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-28 16:50:36 -0400
+  
+SyntaxError (/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/lib/dbquery.rb:24: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+ type == "release-group" type2 = "release"
+                              ^):
+  
+lib/dbquery.rb:24: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-28 16:51:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 5212ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (743: unexpected token at '<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 400 Unable to parse search::imaginaerum</title>
+</head>
+<body><h2>HTTP ERROR 400</h2>
+<p>Problem accessing /. Reason:
+<pre>    Unable to parse search::imaginaerum</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.3.10.v20160621</a><hr/>
+
+</body>
+</html>
+'):
+  
+lib/dbquery.rb:29:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-29 13:57:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1534ms (Views: 1522.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 13:57:59 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (743: unexpected token at '<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 400 Unable to parse search::the killers</title>
+</head>
+<body><h2>HTTP ERROR 400</h2>
+<p>Problem accessing /. Reason:
+<pre>    Unable to parse search::the killers</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.3.10.v20160621</a><hr/>
+
+</body>
+</html>
+'):
+  
+lib/dbquery.rb:30:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:00:20 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (743: unexpected token at '<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 400 Unable to parse search::the killers</title>
+</head>
+<body><h2>HTTP ERROR 400</h2>
+<p>Problem accessing /. Reason:
+<pre>    Unable to parse search::the killers</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.3.10.v20160621</a><hr/>
+
+</body>
+</html>
+'):
+  
+lib/dbquery.rb:30:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:01:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6169ms (Views: 1152.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:02:15 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (743: unexpected token at '<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 400 Unable to parse search::the killers</title>
+</head>
+<body><h2>HTTP ERROR 400</h2>
+<p>Problem accessing /. Reason:
+<pre>    Unable to parse search::the killers</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.3.10.v20160621</a><hr/>
+
+</body>
+</html>
+'):
+  
+lib/dbquery.rb:30:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:02:33 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (743: unexpected token at '<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 400 Unable to parse search::the killers</title>
+</head>
+<body><h2>HTTP ERROR 400</h2>
+<p>Problem accessing /. Reason:
+<pre>    Unable to parse search::the killers</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.3.10.v20160621</a><hr/>
+
+</body>
+</html>
+'):
+  
+lib/dbquery.rb:30:in `search'
+app/controllers/static_pages_controller.rb:10:in `search'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:03:27 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 939ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:03:52 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 503ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+killers&commit=Submit" for 127.0.0.1 at 2017-03-29 14:03:58 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the killers", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 501ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:04:09 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 491ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:04:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:05:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:08:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:09:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:09:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:09:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:10:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+Started GET "/search/q?utf8=%E2%9C%93&q=the+fray&commit=Submit" for 127.0.0.1 at 2017-03-29 14:11:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"the fray", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 11838ms (Views: 1178.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-29 14:13:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 2379ms (Views: 1241.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=metallica&commit=Submit" for 127.0.0.1 at 2017-03-29 14:13:15 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"metallica", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 468ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+

@@ -1,3 +1,4 @@
+
 require 'byebug'
 require 'uri'
 require 'net/http'
@@ -20,7 +21,12 @@ require 'json'
 		# @param {String} type May be "artist", "release-group", "recording"
 		# @param {String} string The string to search
 		def Musicbrainz_db.search type, string
-			path = type + "/?query=" + string
+			path = ""
+			if type == "release-group"
+				path = type + "/?query=release:" + string
+			else
+				path = type + "/?query=" + type + ":" + string
+			end
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
 			# FILTER BY SCORE
@@ -32,7 +38,6 @@ require 'json'
 				end
 			end
 			return arr
-			#return response["#{type}s"]
 		end
 
 		# @param {String} type May be "artist", "release-group", "recording"
@@ -50,4 +55,4 @@ require 'json'
 			response = JSON::parse res.body
 		end
 
-	end
+end
