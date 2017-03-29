@@ -6238,3 +6238,783 @@ Processing by CatalogController#artist as
 Completed 200 OK in 1519ms (Views: 1244.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/artist.65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab" for 127.0.0.1 at 2017-03-29 14:55:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1584ms (Views: 1240.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-29 14:55:29 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 471ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 14:55:31 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 14:56:36 -0400
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 14:57:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1254ms (Views: 1245.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-29 14:57:59 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 430ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 14:58:01 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 14:59:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-29 15:02:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (3.4ms)
+Completed 200 OK in 3418ms (Views: 1183.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:03:13 -0400
+Processing by CatalogController#release_group as 
+Completed 500 Internal Server Error in 16293ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/catalog_controller.rb:19:in `release_group'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (166.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (46.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (256.9ms)
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:03:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:05:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:05:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+No template found for CatalogController#release_group, rendering head :no_content
+Completed 204 No Content in 7946ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/r" for 127.0.0.1 at 2017-03-29 15:06:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/r"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (5.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:06:10 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1192ms (Views: 1191.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=lemonade&commit=Submit" for 127.0.0.1 at 2017-03-29 15:06:22 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"lemonade", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 983ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:06:38 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 456ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:06:40 -0400
+Processing by CatalogController#release_group as 
+No template found for CatalogController#release_group, rendering head :no_content
+Completed 204 No Content in 45079ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:07:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1732ms (Views: 1276.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:07:30 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:08:35 -0400
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:09:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1229ms (Views: 1220.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:09:43 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 535ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:09:45 -0400
+Processing by CatalogController#release_group as 
+Completed 500 Internal Server Error in 3975ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (743: unexpected token at 'See: http://archive.org/download/mbid-99e14f9e-5831-4b2c-b595-531be0f225ea/mbid-99e14f9e-5831-4b2c-b595-531be0f225ea-12790816703.jpg
+'):
+  
+lib/dbquery.rb:67:in `get_cover_art'
+app/controllers/catalog_controller.rb:18:in `release_group'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.8ms)
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:10:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1232ms (Views: 1223.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:11:01 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1109ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:11:04 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:12:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:12:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1216ms (Views: 1207.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:12:55 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 498ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:12:57 -0400
+Processing by CatalogController#release_group as 
+Completed 500 Internal Server Error in 17738ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/catalog_controller.rb:20:in `release_group'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (85.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.5ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (132.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:14:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1295ms (Views: 1286.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:14:06 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 475ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:14:07 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:15:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:17:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1226ms (Views: 1216.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:17:31 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 485ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:17:33 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:18:29 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:19:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:20:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:21:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1226ms (Views: 1216.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:21:25 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 504ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:21:27 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:22:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:23:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1270ms (Views: 1261.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:23:40 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4156ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:23:45 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:24:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:25:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1228ms (Views: 1219.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:25:19 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 488ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:25:21 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:26:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Completed 500 Internal Server Error in 14044ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-29 15:26:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1256ms (Views: 1247.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=life+of+pablo&commit=Submit" for 127.0.0.1 at 2017-03-29 15:27:00 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"life of pablo", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 492ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:27:02 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:28:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:29:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:30:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:31:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:32:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:33:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:34:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:35:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/home/ryan/Dropbox/cosi166b_johnsonr/imdb-for-music/imdb-for-music/lib/dbquery.rb:68: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+lib/dbquery.rb:68: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/catalog_controller.rb:1:in `<top (required)>'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:35:50 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:36:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:37:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:38:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:39:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:40:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+No template found for CatalogController#release_group, rendering head :no_content
+Completed 204 No Content in 981ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:41:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:42:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:43:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:44:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:44:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:44:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:45:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatalogController#release_group as 
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 2790ms (Views: 1278.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.8c18657a-6338-490d-a952-897663596b96" for 127.0.0.1 at 2017-03-29 15:45:50 -0400
+Processing by CatalogController#release_group as 
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1159ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=imaginaerum&commit=Submit" for 127.0.0.1 at 2017-03-29 15:46:01 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"imaginaerum", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 918ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:46:03 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:46:03 -0400
+Processing by CatalogController#release_group as 
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1063ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 943ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.5fbc5995-1b80-4aeb-a31d-48c2d26f0d13" for 127.0.0.1 at 2017-03-29 15:46:07 -0400
+Processing by CatalogController#release_group as 
+Started GET "/release-group.5fbc5995-1b80-4aeb-a31d-48c2d26f0d13" for 127.0.0.1 at 2017-03-29 15:46:07 -0400
+Processing by CatalogController#release_group as 
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (0.9ms)
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1414ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1304ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.0eaa9306-e6df-47be-94ce-04bfe3df782c" for 127.0.0.1 at 2017-03-29 15:46:16 -0400
+Processing by CatalogController#release_group as 
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1327ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=amaranthe&commit=Submit" for 127.0.0.1 at 2017-03-29 15:46:21 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"amaranthe", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 488ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.5d9b44b0-c3fe-459f-8e18-dcf6079e13cd" for 127.0.0.1 at 2017-03-29 15:46:23 -0400
+Processing by CatalogController#release_group as 
+  Rendering catalog/release_group.html.erb within layouts/application
+  Rendered catalog/release_group.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1127ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=thriller&commit=Submit" for 127.0.0.1 at 2017-03-29 15:46:29 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"thriller", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 465ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=michael+jackson&commit=Submit" for 127.0.0.1 at 2017-03-29 15:46:44 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"michael jackson", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 477ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.f1be8703-f308-425a-ac31-6fb304cfb60c" for 127.0.0.1 at 2017-03-29 15:46:46 -0400
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 285ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=michael+jackson&commit=Submit" for 127.0.0.1 at 2017-03-29 15:48:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"michael jackson", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3963ms (Views: 1320.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.f1be8703-f308-425a-ac31-6fb304cfb60c" for 127.0.0.1 at 2017-03-29 15:49:14 -0400
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 282ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.ce8f1c65-1c0e-4685-bea5-f7a27a20b3bf" for 127.0.0.1 at 2017-03-29 15:49:24 -0400
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 278ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.8a92b6b3-1e91-45b5-8936-a0d6787a8be3" for 127.0.0.1 at 2017-03-29 15:49:27 -0400
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 275ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.f27ec8db-af05-4f36-916e-3d57f91ecf5e" for 127.0.0.1 at 2017-03-29 15:49:29 -0400
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 312ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/release-group.a87dfac7-aca6-42e0-93cd-da849434cf6d" for 127.0.0.1 at 2017-03-29 15:49:45 -0400
+Processing by CatalogController#release_group as 
+Completed 500 Internal Server Error in 409ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `first' for nil:NilClass):
+  
+app/controllers/catalog_controller.rb:19:in `release_group'
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.5ms)
+Started GET "/search/q?utf8=%E2%9C%93&q=michael+jackson&commit=Submit" for 127.0.0.1 at 2017-03-29 15:51:19 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"michael jackson", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 533ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=michael+jackson&commit=Submit" for 127.0.0.1 at 2017-03-29 15:51:29 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"michael jackson", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 476ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=michael+jackson&commit=Submit" for 127.0.0.1 at 2017-03-29 15:51:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"michael jackson", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1639ms (Views: 1201.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=artist&commit=Submit" for 127.0.0.1 at 2017-03-29 15:52:05 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"artist", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 428ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=slayer&commit=Submit" for 127.0.0.1 at 2017-03-29 15:52:08 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"slayer", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 444ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=artist&commit=Submit" for 127.0.0.1 at 2017-03-29 15:52:11 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"artist", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 504ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artist.bdf9e707-7054-4873-b855-023a36a36263" for 127.0.0.1 at 2017-03-29 15:52:14 -0400
+Processing by CatalogController#artist as 
+  Rendering catalog/artist.html.erb within layouts/application
+  Rendered catalog/artist.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 499ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/q?utf8=%E2%9C%93&q=thriller&commit=Submit" for 127.0.0.1 at 2017-03-29 15:52:32 -0400
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"thriller", "commit"=>"Submit", "query"=>"q"}
+  Rendering static_pages/search.html.erb within layouts/application
+  Rendered static_pages/search.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 536ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+

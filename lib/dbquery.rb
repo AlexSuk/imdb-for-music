@@ -25,7 +25,7 @@ require 'json'
 			if type == "release-group"
 				path = type + "/?query=release:" + string
 			else
-				path = type + "/?query=" + type + ":" + string
+				path = type + "/?query=" + string
 			end
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
@@ -33,7 +33,7 @@ require 'json'
 			arr = []
 			response = response["#{type}s"]
 			response.each do |obj|
-				if obj["score"] == "100"
+				if obj["score"].to_i == 100
 					arr << obj
 				end
 			end
@@ -53,6 +53,22 @@ require 'json'
 			end
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
+		end
+
+		# @param {String} id The MBID of the release-group whose cover art to find
+		def Musicbrainz_db.get_cover_art id
+			url = "http://coverartarchive.org/release-group/" + id
+			uri = URI.parse(url)
+			req = Net::HTTP::Get.new(uri)
+			res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+				http.request(req)
+			}
+			if res.code == "307" #redirect
+				uri = URI.parse(res.body.split(" ")[1])
+				JSON::parse(uri.read)
+			else
+				res.body
+			end
 		end
 
 end

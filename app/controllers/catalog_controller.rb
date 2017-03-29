@@ -11,6 +11,12 @@ class CatalogController < ApplicationController
   end
 
   def release_group
+    release_group = Musicbrainz_db.find("release-group",params["format"])
+    @id = release_group["id"]
+    @name = release_group["title"]
+    @artist = release_group["artist-credit"].first["artist"]["name"]
+    images = Musicbrainz_db.get_cover_art(@id)["images"]
+    @largeimgurl = images.first["thumbnails"]["large"]
   end
 
   def recording

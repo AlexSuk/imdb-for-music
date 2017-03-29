@@ -1,3 +1,4 @@
+=begin
 require 'test_helper'
 
 class ReviewsControllerTest < ActionDispatch::IntegrationTest
@@ -46,3 +47,4 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to reviews_url
   end
 end
+=end

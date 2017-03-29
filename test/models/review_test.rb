@@ -1,3 +1,4 @@
+=begin
 require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
@@ -5,3 +6,4 @@ class ReviewTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+=end
