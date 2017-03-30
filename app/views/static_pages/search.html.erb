@@ -6,7 +6,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
     <th>Type</th>
   </tr>
 
@@ -14,8 +13,10 @@
     <tr>
       <td>
         <%= link_to artist["name"], artist_path(artist["id"])%>
+        <% if (artist["disambiguation"] != nil) %>
+          <span class="disambiguation">(<%= artist["disambiguation"] %>) </span>
+        <% end %>
       </td>
-      <td><%= artist["disambiguation"] %></td>
       <td><%= artist["type"] %></td>
     </tr>
   <%end %>
