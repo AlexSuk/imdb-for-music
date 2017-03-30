@@ -4,6 +4,7 @@ class CatalogController < ApplicationController
 
   def artist
     artist = Musicbrainz_db.find("artist",params["format"])
+    byebug
     @name = artist["name"]
     @country = artist["country"]
     @id = artist["id"] # note this is the MusicBrainz-assigned id, not the rails assigned one
@@ -16,7 +17,11 @@ class CatalogController < ApplicationController
     @name = release_group["title"]
     @artist = release_group["artist-credit"].first["artist"]["name"]
     images = Musicbrainz_db.get_cover_art(@id)["images"]
-    @largeimgurl = images.first["thumbnails"]["large"]
+    if (images != nil)
+      @largeimgurl = images.first["thumbnails"]["large"]
+    else
+      @largeimgurl = 'http://djpunjab.in/cover.jpg'
+    end
   end
 
   def recording

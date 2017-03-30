@@ -13,7 +13,7 @@
   <% @release_groups.each do |release_group|%>
   <% #if release_group["first-release-date"] && Date.parse(release_group["first-release-date"]) < Date.today %>
       <tr>
-        <td><%= release_group["title"] %></td>
+        <td><%= link_to release_group["title"], release_group_path(release_group["id"]) %></td>
         <td><%= release_group["first-release-date"] %></td>
         <td> <%= release_group["secondary-types"].empty? ?
         release_group["primary-type"] :

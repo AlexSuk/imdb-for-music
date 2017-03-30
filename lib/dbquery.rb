@@ -45,7 +45,7 @@ require 'json'
 		def Musicbrainz_db.find type, id
 			path = type + "/" + id
 			if type == "artist"
-				path += "?inc=release-groups"
+				path += "?inc=release-groups+url-rels+artist-rels"
 			elsif type == "release-group"
 				path += "?inc=artists+releases"
 			elsif type == "recording"
