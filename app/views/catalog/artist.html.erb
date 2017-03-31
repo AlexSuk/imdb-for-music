@@ -1,8 +1,18 @@
 <% provide(:title, @name) %>
 <h1>Artist Name: <%= @name %></h1>
 <img style="height: 300px; width: 300px;" src="<%=@imgurl %>"></img>
-<h3>Artist Releases</h3>
 
+<% if @band_members != [] %>
+  <h3>Band Members </h3>
+
+  <table>
+    <th>Name</th> <!-- If band member has mbid, link to their artist page -->
+    <th>Instrument</th>
+    <th>Member Since</th>
+  </table>
+<%end>
+
+<h3><%= @name %>'s Releases</h3>
 <table>
   <tr>
     <th>Title</th>
