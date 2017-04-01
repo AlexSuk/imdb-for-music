@@ -39,7 +39,7 @@
           <td> <%= member["artist"]["name"] %> </td>
         <%end%>
         <td> <%= member["attributes"].join(", ") %> </td>
-        <td> <%= member["begin"].to_s + "-" + member["end"] %> </td>
+        <td> <%= member["begin"].to_s + "-" + (member["end"] || "") %> </td>
       </tr>
     <%end%>
 

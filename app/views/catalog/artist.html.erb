@@ -7,3 +7,7 @@
 <%end%>
 
 <%= render 'artist_releases' %>
+
+  <% @images.each do |image_url| %>
+    <img src="<%=image_url%>"></img>
+  <%end%>
