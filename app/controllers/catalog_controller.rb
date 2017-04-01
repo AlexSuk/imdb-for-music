@@ -112,7 +112,6 @@ class CatalogController < ApplicationController
             i = i + 1
           end
         end
-
       when "last.fm"
         # parse for last.fm
       when "myspace"
