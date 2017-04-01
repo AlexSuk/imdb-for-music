@@ -2,33 +2,8 @@
 <h1>Artist Name: <%= @name %></h1>
 <img style="height: 300px; width: 300px;" src="<%=@imgurl %>"></img>
 
-<% if @band_members != [] %>
-  <h3>Band Members </h3>
+<% if @type == "Group" %>
+<%= render 'artist_members' %>
+<%end%>
 
-  <table>
-    <th>Name</th> <!-- If band member has mbid, link to their artist page -->
-    <th>Instrument</th>
-    <th>Member Since</th>
-  </table>
-<%end>
-
-<h3><%= @name %>'s Releases</h3>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Year</th>
-    <th>Type</th>
-  </tr>
-
-  <% @release_groups.each do |release_group|%>
-  <% #if release_group["first-release-date"] && Date.parse(release_group["first-release-date"]) < Date.today %>
-      <tr>
-        <td><%= link_to release_group["title"], release_group_path(release_group["id"]) %></td>
-        <td><%= release_group["first-release-date"] %></td>
-        <td> <%= release_group["secondary-types"].empty? ?
-        release_group["primary-type"] :
-        release_group["secondary-types"].first %> </td>
-      </tr>
-    <% #end%>
-  <%end %>
-</table
+<%= render 'artist_releases' %>

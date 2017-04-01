@@ -1,34 +1,23 @@
 require './lib/dbquery'
+#require './app/helpers/artist_helper.rb'
 
 class CatalogController < ApplicationController
 
   def artist
     artist = Musicbrainz_db.find("artist",params["format"])
+    @type = artist["type"]
     @name = artist["name"]
     @country = artist["country"]
     @id = artist["id"] # note this is the MusicBrainz-assigned id, not the rails assigned one
     @release_groups = artist["release-groups"].sort_by { |hash| hash['first-release-date']}
 
     relations = artist["relations"]
-    @artist_relations = []
-    @url_relations = []
-    relations.each do |relation|
-      if relation["target-type"] == "url"
-        @url_relations << relation
-      elsif relation["target-type"] == "artist"
-        @artist_relations << relation
-      end
-    end
+    artist_relations = get_artist_relations(relations, "artist")
+    url_relations = get_artist_relations(relations, "url")
 
-    # get band members, if there are any
-    @band_members = []
-    @artist_relations.each do |a_relation|
-      if a_relation["type"] == "member of band"
-        @band_members << a_relation
-      end
-    end
+    @band_members = get_artist_band_members(artist_relations)
 
-    byebug
+
 
   end
 
@@ -46,6 +35,35 @@ class CatalogController < ApplicationController
   end
 
   def recording
+  end
+
+  private
+
+  # Get specified relations of Artist data
+  # @param {Iterable} relations A hash of all relations to sift through
+  # @param {String} type The relation type to look for
+  def get_artist_relations relations, type
+    arr = []
+    relations.each do |relation|
+      if relation["target-type"] == type
+        arr << relation
+      end
+    end
+    return arr
+  end
+
+  # Get band members for a list of Artist Relations
+  # @param {Iterable} artist_relations The collection of Artist Relations to sift through
+  def get_artist_band_members artist_relations
+    hash = {:current => [], :former => []}
+    artist_relations.each do |relation|
+      if relation["type"] == "member of band" && relation["ended"]
+        hash[:former] << relation
+      elsif relation["type"] == "member of band" && !relation["ended"]
+        hash[:current] << relation
+      end
+    end
+    return hash
   end
 
 end
