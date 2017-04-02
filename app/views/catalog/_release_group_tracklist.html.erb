@@ -8,7 +8,7 @@
   <% @tracklist.each do |track| %>
     <tr>
       <td> <%= track["number"] %> </td>
-      <td> <%= track["recording"]["title"] %> </td>
+      <td> <%= link_to track["recording"]["title"], recording_path(track["recording"]["id"]) %> </td>
       <td> <%= Time.at((track["recording"]["length"].to_i / 1000).to_i).utc.strftime("%H:%M:%S")%> </td>
     </tr>
   <%end%>

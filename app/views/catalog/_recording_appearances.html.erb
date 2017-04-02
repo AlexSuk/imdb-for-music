@@ -1,0 +1,14 @@
+<h3><%= @name %> appears on: </h3>
+<ul>
+  <% @unique_releases.each do |release| %>
+    <%
+    date = nil
+    if release["first-release-date"].include? "-"
+      date = Date.parse(release["first-release-date"]).year.to_s
+    else
+      date = release["first-release-date"]
+    end
+    %>
+    <li> <%= link_to release["title"] + " (" + date + ")", release_group_path(release["id"]) %> </li>
+  <%end%>
+</ul>

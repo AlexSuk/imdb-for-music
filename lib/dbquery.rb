@@ -51,7 +51,7 @@ require 'json'
 			elsif type == "release"
 				path+= "?inc=recordings"
 			elsif type == "recording"
-				path += "?inc=artists+releases"
+				path += "?inc=artists+releases+release-groups"
 			end
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body

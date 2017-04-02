@@ -1,5 +1,5 @@
 require './lib/dbquery'
-#require './app/helpers/artist_helper.rb'
+require 'set'
 
 class CatalogController < ApplicationController
 
@@ -13,7 +13,10 @@ class CatalogController < ApplicationController
 
     relations = artist["relations"]
     artist_relations = get_artist_relations(relations, "artist")
+    # TODO only get band members for Groups
     @band_members = get_artist_band_members(artist_relations)
+
+    # TODO get associated acts for Persons
 
     url_relations = get_artist_relations(relations, "url")
     @images = parse_relations_into_images(url_relations)
@@ -37,6 +40,10 @@ class CatalogController < ApplicationController
   end
 
   def recording
+    recording = Musicbrainz_db.find("recording", params["format"])
+    @name = recording["title"]
+    @artist = recording["artist-credit"].first["artist"]
+    @unique_releases = get_unique_releases_for_recording(recording["releases"])
   end
 
   private
@@ -134,7 +141,7 @@ class CatalogController < ApplicationController
   # RELEASE GROUP PAGE
 
   # Get the most suitable release data to display on release_group view
-  # TODO this could be better, more inclusive
+  # TODO this could be better, more inclusive AND NEEDS TO BE FASTER
   # @param {Iterable} releases The collection of releases to sift through
   def get_best_release releases
     max_tracks = 0
@@ -150,6 +157,24 @@ class CatalogController < ApplicationController
       # if this release has the most tracks, make it the best one
     end
     return rel
+  end
+
+  # RECORDING PAGE
+
+  # Get all unique releases for a recording, given a list of releases that recording appears on
+  # @param {Iterable} releases The collections of releases to sift through
+  def get_unique_releases_for_recording releases
+    unique_titles = Set.new
+    unique_releases = []
+    releases.each do |release|
+      titles_count_old = unique_titles.count
+      unique_titles.add(release["title"])
+      titles_count_new = unique_titles.count
+      if titles_count_new != titles_count_old
+        unique_releases << release["release-group"]
+      end
+    end
+    return unique_releases
   end
 
 

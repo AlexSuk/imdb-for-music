@@ -1,5 +1,14 @@
 <% provide(:title, @name) %>
-<h1> <%= @name %> (<%= Date.parse(@release_date).year %>)</h1>
+<h1> <%= @name %>
+  <%
+  date = nil
+  if @release_date.include? "-"
+    date = Date.parse(@release_date).year
+  else
+    date = @release_date
+  end
+  %>
+  (<%= date %>)</h1>
 <h3>By <%= link_to @artist["name"], artist_path(@artist["id"]) %></h3>
 <img style="height: 300px; width: 300px;" src="<%=@largeimgurl %>"></img>
 
