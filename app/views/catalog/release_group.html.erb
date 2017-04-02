@@ -1,3 +1,6 @@
 <% provide(:title, @name) %>
-<h1>Release Name: <%= @name %></h1>
+<h1> <%= @name %> (<%= Date.parse(@release_date).year %>)</h1>
+<h3>By <%= link_to @artist["name"], artist_path(@artist["id"]) %></h3>
 <img style="height: 300px; width: 300px;" src="<%=@largeimgurl %>"></img>
+
+<%= render 'release_group_tracklist' %>

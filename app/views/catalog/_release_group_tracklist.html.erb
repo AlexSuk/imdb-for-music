@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Name</th>
+    <th>Length</th>
+  </tr>
+
+  <% @tracklist.each do |track| %>
+    <tr>
+      <td> <%= track["number"] %> </td>
+      <td> <%= track["recording"]["title"] %> </td>
+      <td> <%= Time.at((track["recording"]["length"].to_i / 1000).to_i).utc.strftime("%H:%M:%S")%> </td>
+    </tr>
+  <%end%>
+
+</table>

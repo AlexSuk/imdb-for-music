@@ -22,14 +22,18 @@ class CatalogController < ApplicationController
   def release_group
     release_group = Musicbrainz_db.find("release-group",params["format"])
     @id = release_group["id"]
+    @release_date = release_group["first-release-date"]
     @name = release_group["title"]
-    @artist = release_group["artist-credit"].first["artist"]["name"]
+    @artist = release_group["artist-credit"].first["artist"]
     images = Musicbrainz_db.get_cover_art(@id)["images"]
     if (images != nil)
       @largeimgurl = images.first["thumbnails"]["large"]
     else
       @largeimgurl = 'http://djpunjab.in/cover.jpg'
     end
+
+    releases = release_group["releases"]
+    @tracklist = get_best_release(releases)["media"].first["tracks"]
   end
 
   def recording
@@ -126,6 +130,27 @@ class CatalogController < ApplicationController
   end
 
   # TODO get artist social media, official site, etc
+
+  # RELEASE GROUP PAGE
+
+  # Get the most suitable release data to display on release_group view
+  # TODO this could be better, more inclusive
+  # @param {Iterable} releases The collection of releases to sift through
+  def get_best_release releases
+    max_tracks = 0
+    rel = nil
+    releases.each do |release|
+      # get all tracks of this release
+      release = Musicbrainz_db.find("release", release["id"])
+      track_count = release["media"].first["track-count"]
+      if (track_count > max_tracks)
+        max_tracks = track_count
+        rel = release
+      end
+      # if this release has the most tracks, make it the best one
+    end
+    return rel
+  end
 
 
 end

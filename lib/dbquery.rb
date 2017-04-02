@@ -40,7 +40,7 @@ require 'json'
 			return arr
 		end
 
-		# @param {String} type May be "artist", "release-group", "recording"
+		# @param {String} type May be "artist", "release-group", "release", "recording"
 		# @param {String} id The MBID of the item to find
 		def Musicbrainz_db.find type, id
 			path = type + "/" + id
@@ -48,6 +48,8 @@ require 'json'
 				path += "?inc=release-groups+url-rels+artist-rels"
 			elsif type == "release-group"
 				path += "?inc=artists+releases"
+			elsif type == "release"
+				path+= "?inc=recordings"
 			elsif type == "recording"
 				path += "?inc=artists+releases"
 			end
