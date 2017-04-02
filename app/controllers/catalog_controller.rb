@@ -148,6 +148,7 @@ class CatalogController < ApplicationController
     rel = nil
     releases.each do |release|
       # get all tracks of this release
+      # TODO do not make this many requests to mb this fast
       release = Musicbrainz_db.find("release", release["id"])
       track_count = release["media"].first["track-count"]
       if (track_count > max_tracks)
