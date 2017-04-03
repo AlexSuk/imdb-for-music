@@ -1,16 +1,16 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<!-- design taken from tutorial: https://www.codementor.io/ruby-on-rails/tutorial/threaded-comments-polymorphic-associations -->
+<%= link_to(@post.title, @post.url, target: "_blank") %><br/>
+<small>Submitted <%= time_ago_in_words(@post.created_at) %> ago</small>
+<% (byebug) %>
+<p><%= @post.body %></p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @post.comment %>
-</p>
+<h3>Comments</h3>
 
-<p>
-  <strong>User_ID:</strong>
-  <%= @post.user_id %>
-</p>
-<%= link_to 'Reply', reply_post_path(@post) %> |
-<%= link_to 'Back', post_path %>
+<%= form_for [@post, Comment.new] do |f| %>
+<%= f.text_area :body, placeholder: "Add a comment" %><br/>
+<%= f.submit "Add Comment" %>
+<% end %>
+
+<ul>
+  <%= render(partial: 'comments/comment', collection: @post.comments) %>
+</ul>
