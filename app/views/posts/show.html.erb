@@ -1,7 +1,6 @@
 <!-- design taken from tutorial: https://www.codementor.io/ruby-on-rails/tutorial/threaded-comments-polymorphic-associations -->
 <%= link_to(@post.title, @post.url, target: "_blank") %><br/>
 <small>Submitted <%= time_ago_in_words(@post.created_at) %> ago</small>
-<% (byebug) %>
 <p><%= @post.body %></p>
 
 <h3>Comments</h3>

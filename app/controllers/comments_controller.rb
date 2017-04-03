@@ -6,7 +6,6 @@ before_action :find_commentable
   end
 
   def create
-    (byebug)
     @comment = @commentable.comments.new(comment_params)
 
     if @comment.save
