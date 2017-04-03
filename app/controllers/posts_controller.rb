@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    (byebug)
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :comment, :user_id)
+    params.require(:post).permit(:title, :comment, :user_id, :body)
   end
 
 end

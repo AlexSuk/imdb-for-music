@@ -3,14 +3,6 @@ Rails.application.routes.draw do
   root "static_pages#index"
   get '/search/:query' => 'static_pages#search', :as => 'search'
 
-  resources :users
-  resources :posts do
-    member do
-      get 'reply'
-    end
-  end
-  resources :sessions
-
   get 'sessions/new'
 
   get '/artist',        to: 'catalog#artist'
@@ -22,5 +14,12 @@ Rails.application.routes.draw do
   post '/login',    to: 'sessions#create'
   delete '/logout',   to: 'sessions#destroy'
 
+  resources :users
+  resources :posts do
+    resources :comments
+  end
 
+  resources :comments do
+    resources :comments
+  end
 end
