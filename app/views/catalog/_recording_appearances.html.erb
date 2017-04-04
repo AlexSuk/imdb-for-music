@@ -1,6 +1,6 @@
-<h3><%= @name %> appears on: </h3>
+<h3><%= @recording.name %> appears on: </h3>
 <ul>
-  <% @unique_releases.each do |release| %>
+  <% @recording.unique_releases.each do |release| %>
     <%
     date = nil
     if release["first-release-date"].include? "-"

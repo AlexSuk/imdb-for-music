@@ -1,5 +1,5 @@
-<% provide(:title, @name) %>
-<h1><%= @name %></h1>
-<h3>By <%= link_to @artist["name"], artist_path(@artist["id"]) %></h3>
+<% provide(:title, @recording.name) %>
+<h1><%= @recording.name %></h1>
+<h3>By <%= link_to @recording.artist["name"], artist_path(@recording.artist["id"]) %></h3>
 
 <%= render 'recording_appearances' %>
