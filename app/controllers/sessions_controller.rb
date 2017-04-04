@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
     user = current_user
     if user != nil
@@ -21,16 +22,16 @@ class SessionsController < ApplicationController
 
   def destroy
       log_out
-      redirect_to new_session_path
+      redirect_to root_path
     end
-end
+  end
 
 
-def log_in(user)
-  session[:user_id] = user.id
-end
+  def log_in(user)
+    session[:user_id] = user.id
+  end
 
-def log_out
+  def log_out
     session.delete(:user_id)
     @current_user = nil
   end
