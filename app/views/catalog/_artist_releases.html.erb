@@ -1,4 +1,4 @@
-<h3><%= @name %>'s Releases</h3>
+<h3><%= @artist.name %>'s Releases</h3>
 <table>
   <tr>
     <th>Title</th>
@@ -6,7 +6,7 @@
     <th>Type</th>
   </tr>
 
-  <% @release_groups.each do |release_group|%>
+  <% @artist.release_groups.each do |release_group|%>
       <tr>
         <td><%= link_to release_group["title"], release_group_path(release_group["id"]) %></td>
         <td><%= release_group["first-release-date"] %></td>

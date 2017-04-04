@@ -1,13 +1,12 @@
-<% provide(:title, @name) %>
-<h1><%= @name %></h1>
-<img style="height: 300px; width: 300px;" src="<%=@imgurl %>"></img>
+<% provide(:title, @artist.name) %>
+<h1><%= @artist.name %></h1>
 
-<% if @type == "Group" %>
+<% if @artist.type == "Group" %>
 <%= render 'artist_members' %>
 <%end%>
 
 <%= render 'artist_releases' %>
 
-  <% @images.each do |image_url| %>
+  <% @artist.images.each do |image_url| %>
     <img src="<%=image_url%>"></img>
   <%end%>

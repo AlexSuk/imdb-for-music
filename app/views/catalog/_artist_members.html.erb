@@ -1,4 +1,4 @@
-<% if @band_members != [] %>
+<% if @artist.band_members != [] %>
   <h3>Current Members </h3>
   <table>
     <tr>
@@ -7,7 +7,7 @@
       <th>Years</th>
     </tr>
 
-    <% @band_members[:current].each do |member| %>
+    <% @artist.band_members[:current].each do |member| %>
       <tr>
         <% if member["artist"]["id"] %>
           <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
@@ -22,7 +22,7 @@
   </table>
 <%end %>
 
-<% if @band_members[:former] != [] %>
+<% if @artist.band_members[:former] != [] %>
   <h3>Former Members</h3>
   <table>
     <tr>
@@ -31,7 +31,7 @@
       <th>Years</th>
     </tr>
 
-    <% @band_members[:former].each do |member| %>
+    <% @artist.band_members[:former].each do |member| %>
       <tr>
         <% if member["artist"]["id"] %>
           <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
