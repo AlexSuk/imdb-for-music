@@ -5,7 +5,7 @@
     <th>Length</th>
   </tr>
 
-  <% @tracklist.each do |track| %>
+  <% @release_group.tracklist.each do |track| %>
     <tr>
       <td> <%= track["number"] %> </td>
       <td> <%= link_to track["recording"]["title"], recording_path(track["recording"]["id"]) %> </td>

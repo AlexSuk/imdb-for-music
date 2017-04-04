@@ -1,15 +1,15 @@
-<% provide(:title, @name) %>
-<h1> <%= @name %>
+<% provide(:title, @release_group.name) %>
+<h1> <%= @release_group.name %>
   <%
   date = nil
-  if @release_date.include? "-"
-    date = Date.parse(@release_date).year
+  if @release_group.release_date.include? "-"
+    date = Date.parse(@release_group.release_date).year
   else
-    date = @release_date
+    date = @release_group.release_date
   end
   %>
   (<%= date %>)</h1>
-<h3>By <%= link_to @artist["name"], artist_path(@artist["id"]) %></h3>
-<img style="height: 300px; width: 300px;" src="<%=@largeimgurl %>"></img>
+<h3>By <%= link_to @release_group.artist["name"], artist_path(@release_group.artist["id"]) %></h3>
+<img style="height: 300px; width: 300px;" src="<%=@release_group.image %>"></img>
 
 <%= render 'release_group_tracklist' %>

@@ -1,5 +1,4 @@
 require './lib/dbquery'
-require 'set'
 
 class Artist
 
