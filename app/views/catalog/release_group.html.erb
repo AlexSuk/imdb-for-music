@@ -2,11 +2,8 @@
 <h1> <%= @release_group.name %>
   <%
   date = nil
-  if @release_group.release_date.include? "-"
-    date = Date.parse(@release_group.release_date).year
-  else
-    date = @release_group.release_date
-  end
+  dmy = @release_group.release_date.split("-")
+  date = dmy[0] unless dmy[0] == nil
   %>
   (<%= date %>)</h1>
 <h3>By <%= link_to @release_group.artist["name"], artist_path(@release_group.artist["id"]) %></h3>

@@ -1,18 +1,21 @@
-<h3><%= @artist.name %>'s Releases</h3>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Year</th>
-    <th>Type</th>
-  </tr>
+<%if @artist.release_groups.count > 0%>
 
-  <% @artist.release_groups.each do |release_group|%>
+  <h3><%= @artist.name %>'s Releases</h3>
+    <table>
       <tr>
-        <td><%= link_to release_group["title"], release_group_path(release_group["id"]) %></td>
-        <td><%= release_group["first-release-date"] %></td>
-        <td> <%= release_group["secondary-types"].empty? ?
-        release_group["primary-type"] :
-        release_group["secondary-types"].first %> </td>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Type</th>
       </tr>
-  <%end %>
-</table
+
+      <% @artist.release_groups.each do |release_group|%>
+          <tr>
+            <td><%= link_to release_group["title"], release_group_path(release_group["id"]) %></td>
+            <td><%= release_group["first-release-date"] %></td>
+            <td> <%= release_group["secondary-types"].empty? ?
+            release_group["primary-type"] :
+            release_group["secondary-types"].first %> </td>
+          </tr>
+      <%end %>
+    </table>
+<%end%>

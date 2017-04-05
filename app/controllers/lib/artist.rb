@@ -54,59 +54,61 @@ class Artist
 
   # Get image urls for this artist from url relations
   # Returns array of image urls
+  # TODO limit number of images (to limit TooManyHTTPRequests errors)
   def images
     url_relations = get_relations(self.relations, "url")
     imgurls = []
     url_relations.each do |relation|
-      puts "url relation"
-      url = relation["url"]["resource"]
-      case relation["type"]
-      when "allmusic"
-        doc = Nokogiri::HTML(open(url))
-        # parse for allmusic.com
-        if doc.css(".artist-image").count != 0
-          imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
-          imgurls << imgurl
-        end
-        # TODO -- can we get all images in lightbox gallery?
-      when "bandsintown"
-        doc = Nokogiri::HTML(open(url))
-        if doc.css(".sidebar-image").count != 0
-          imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
-          imgurls << imgurl
-        end
-      when "discogs"
-        doc = Nokogiri::HTML(open(url))
-        # parse for discogs.com
-        gallery_url = ""
-        if doc.css(".image_gallery_more").count != 0
-          gallery_url = "https://www.discogs.com" +
-                      doc.css(".image_gallery_more").children.css("a").attribute("href").value
-        elsif doc.css(".image_gallery").count != 0
-          gallery_url = "https://www.discogs.com" +
-                      doc.css(".image_gallery").css("a").attribute("href").value
-        end
-
-        if gallery_url != ""
-          doc = Nokogiri::HTML(open(gallery_url))
-          gallery = doc.css('[id="view_images"]').children.css("p")
-          i = 0
-          gallery.each do |element|
-            if (element.children.css("img").count != 0)
-              puts "in discogs" + i.to_s
-              imgurl = element.css("img").attribute("src").value
-              imgurls << imgurl
-              puts imgurls
-            end
-            i = i + 1
+      if imgurls.count < 4
+        puts "url relation"
+        url = relation["url"]["resource"]
+        case relation["type"]
+        when "allmusic"
+          doc = Nokogiri::HTML(open(url))
+          # parse for allmusic.com
+          if doc.css(".artist-image").count != 0
+            imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
+            imgurls << imgurl
           end
+          # TODO -- can we get all images in lightbox gallery?
+        when "bandsintown"
+          doc = Nokogiri::HTML(open(url))
+          if doc.css(".sidebar-image").count != 0
+            imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
+            imgurls << imgurl
+          end
+        when "discogs"
+          doc = Nokogiri::HTML(open(url))
+          # parse for discogs.com
+          gallery_url = ""
+          if doc.css(".image_gallery_more").count != 0
+            gallery_url = "https://www.discogs.com" +
+                        doc.css(".image_gallery_more").children.css("a").attribute("href").value
+          elsif doc.css(".image_gallery").count != 0
+            gallery_url = "https://www.discogs.com" +
+                        doc.css(".image_gallery").css("a").attribute("href").value
+          end
+
+          if gallery_url != ""
+            doc = Nokogiri::HTML(open(gallery_url))
+            gallery = doc.css('[id="view_images"]').children.css("p")
+            i = 0
+            gallery.each do |element|
+              if (element.children.css("img").count != 0)
+                puts "in discogs" + i.to_s
+                imgurl = element.css("img").attribute("src").value
+                imgurls << imgurl
+              end
+              i = i + 1
+            end
+          end
+        when "last.fm"
+          # parse for last.fm
+        when "myspace"
+          # parse for myspace.com
+        when "wikipedia"
+          # parse for wikipedia
         end
-      when "last.fm"
-        # parse for last.fm
-      when "myspace"
-        # parse for myspace.com
-      when "wikipedia"
-        # parse for wikipedia
       end
     end
 

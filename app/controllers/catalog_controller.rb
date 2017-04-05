@@ -5,18 +5,15 @@ require 'lib/recording'
 class CatalogController < ApplicationController
 
   def artist
-    mbid = params["format"]
-    @artist = Artist.new(mbid)
+    @artist = Artist.new(params["format"])
   end
 
   def release_group
-    mbid = params["format"]
-    @release_group = ReleaseGroup.new(mbid)
+    @release_group = ReleaseGroup.new(params["format"])
   end
 
   def recording
-    mbid = params["format"]
-    @recording = Recording.new(mbid)
+    @recording = Recording.new(params["format"])
   end
 
 end

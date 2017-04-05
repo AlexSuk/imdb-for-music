@@ -15,7 +15,7 @@
           <td> <%= member["artist"]["name"] %> </td>
         <%end%>
         <td> <%= member["attributes"].join(", ") %> </td>
-        <td> <%= member["begin"].to_s + "-" + Date.today.year.to_s %> </td>
+        <td> <%= member["begin"].split("-")[0].to_s + "-" + Date.today.year.to_s %> </td>
       </tr>
     <%end%>
 
@@ -39,7 +39,7 @@
           <td> <%= member["artist"]["name"] %> </td>
         <%end%>
         <td> <%= member["attributes"].join(", ") %> </td>
-        <td> <%= member["begin"].to_s + "-" + (member["end"] || "") %> </td>
+        <td> <%= member["begin"].split("-")[0].to_s + "-" + (member["end"] || "") %> </td>
       </tr>
     <%end%>
 
