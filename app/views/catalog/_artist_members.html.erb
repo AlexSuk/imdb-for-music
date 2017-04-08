@@ -15,7 +15,11 @@
           <td> <%= member["artist"]["name"] %> </td>
         <%end%>
         <td> <%= member["attributes"].join(", ") %> </td>
+        <% if member["begin"].include? "-" %> 
         <td> <%= member["begin"].split("-")[0].to_s + "-" + Date.today.year.to_s %> </td>
+        <% else %>
+        <td> <%= member["begin"].to_s + "-" + Date.today.year.to_s %> </td>
+        <% end %> 
       </tr>
     <%end%>
 
@@ -33,13 +37,17 @@
 
     <% @artist.band_members[:former].each do |member| %>
       <tr>
-        <% if member["artist"]["id"] %>
+        <% if !member["artist"]["id"].nil? %>
           <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
         <% else %>
           <td> <%= member["artist"]["name"] %> </td>
         <%end%>
         <td> <%= member["attributes"].join(", ") %> </td>
-        <td> <%= member["begin"].split("-")[0].to_s + "-" + (member["end"] || "") %> </td>
+        <% if !member["begin"].nil? %>
+          <td> <%= member["begin"].split("-")[0].to_s + "-" + (member["end"] || "") %> </td>
+        <% else %>
+          <td> unknown </td>
+        <%end%>
       </tr>
     <%end%>
 

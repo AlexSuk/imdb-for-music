@@ -24,7 +24,8 @@ class ReleaseGroup
 
   # Return album cover; if no cover found, return image with "Not found"
   def image
-    images = Musicbrainz_db.get_cover_art(self.id)["images"]
+    #images = Musicbrainz_db.get_cover_art(self.id)["images"]
+    images = SearchModule.get_cover_art(self.id)["images"]
     if images != nil
       return images.first["thumbnails"]["large"]
     else
@@ -49,7 +50,8 @@ class ReleaseGroup
     releases.each do |release|
       # get all tracks of this release
       # TODO do not make this many requests to mb this fast
-      release = Musicbrainz_db.find("release", release["id"])
+      #release = Musicbrainz_db.find("release", release["id"])
+      release = SearchModule.find("release", release["id"])
       track_count = release["media"].first["track-count"]
       if (track_count > max_tracks)
         max_tracks = track_count

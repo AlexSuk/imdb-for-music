@@ -1,11 +1,13 @@
 require './lib/dbquery'
+require './lib/searchmodule'
 
 class Artist
 
   # TODO get artist social media, official site, etc
 
   def initialize(mbid)
-    @artist_data = Musicbrainz_db.find("artist", mbid)
+    @artist_data = SearchModule.find("artist", mbid)
+    #@artist_data = Musicbrainz_db.find("artist", mbid)
   end
 
   # Return the MBID of this artist
@@ -52,14 +54,26 @@ class Artist
     end
   end
 
+  def images
+    if !(SearchModule.exists_cover_art @artist_data["id"])
+      @imgurls = self.images_fetch
+      SearchModule.set_cover_art @artist_data["id"], @imgurls
+      return @imgurls
+    else
+      @imgurls = SearchModule.get_cover_art @artist_data["id"]
+      return @imgurls
+    end
+  end
+
   # Get image urls for this artist from url relations
   # Returns array of image urls
   # TODO limit number of images (to limit TooManyHTTPRequests errors)
-  def images
+  def images_fetch
     url_relations = get_relations(self.relations, "url")
-    imgurls = []
+    @imgurls = []
+    #byebug
     url_relations.each do |relation|
-      if imgurls.count < 4
+      if @imgurls.count < 4
         puts "url relation"
         url = relation["url"]["resource"]
         case relation["type"]
@@ -68,14 +82,14 @@ class Artist
           # parse for allmusic.com
           if doc.css(".artist-image").count != 0
             imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
-            imgurls << imgurl
+            @imgurls << imgurl
           end
           # TODO -- can we get all images in lightbox gallery?
         when "bandsintown"
           doc = Nokogiri::HTML(open(url))
           if doc.css(".sidebar-image").count != 0
             imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
-            imgurls << imgurl
+            @imgurls << imgurl
           end
         when "discogs"
           doc = Nokogiri::HTML(open(url))
@@ -97,7 +111,7 @@ class Artist
               if (element.children.css("img").count != 0)
                 puts "in discogs" + i.to_s
                 imgurl = element.css("img").attribute("src").value
-                imgurls << imgurl
+                @imgurls << imgurl
               end
               i = i + 1
             end
@@ -112,7 +126,7 @@ class Artist
       end
     end
 
-    return imgurls
+    return @imgurls
     # TODO check for duplicate images, maybe use phasion https://github.com/westonplatter/phashion
   end
 
