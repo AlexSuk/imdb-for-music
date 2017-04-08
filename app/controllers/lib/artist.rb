@@ -135,7 +135,7 @@ class Artist
           arr.delete_at(arr.length-1)
           arr = arr.join("/")
           imgurl = arr
-          imgurls << imgurl
+          @imgurls << imgurl
         end
       end
     end
