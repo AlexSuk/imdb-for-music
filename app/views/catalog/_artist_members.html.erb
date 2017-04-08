@@ -15,10 +15,12 @@
           <td> <%= member["artist"]["name"] %> </td>
         <%end%>
         <td> <%= member["attributes"].join(", ") %> </td>
+        <% if !member["begin"].nil? %> 
         <% if member["begin"].include? "-" %> 
         <td> <%= member["begin"].split("-")[0].to_s + "-" + Date.today.year.to_s %> </td>
         <% else %>
         <td> <%= member["begin"].to_s + "-" + Date.today.year.to_s %> </td>
+        <% end %> 
         <% end %> 
       </tr>
     <%end%>
