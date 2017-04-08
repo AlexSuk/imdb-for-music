@@ -3,7 +3,7 @@ require './lib/dbquery'
 class ReleaseGroup
 
   def initialize(mbid)
-    @release_group_data = Musicbrainz_db.find("release-group", mbid)
+    @release_group_data = SearchModule.find("release-group", mbid)
   end
 
   def id
