@@ -4,7 +4,7 @@ require 'set'
 class Recording
 
   def initialize(mbid)
-    @recording_data = Musicbrainz_db.find("recording", mbid)
+    @recording_data = SearchModule.find("recording", mbid)
   end
 
   def id
