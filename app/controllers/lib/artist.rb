@@ -91,7 +91,10 @@ class Artist
             imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
             @imgurls << imgurl
           end
+
         when "discogs"
+          # This site has  very low threshold for htttp request volume
+=begin
           doc = Nokogiri::HTML(open(url))
           # parse for discogs.com
           gallery_url = ""
@@ -106,22 +109,33 @@ class Artist
           if gallery_url != ""
             doc = Nokogiri::HTML(open(gallery_url))
             gallery = doc.css('[id="view_images"]').children.css("p")
-            i = 0
+            if gallery.first.children.css("img").count != 0
+              imgurl = gallery.first.css("img").attribute("src").value
+              imgurls << imgurl
+            end
             gallery.each do |element|
               if (element.children.css("img").count != 0)
-                puts "in discogs" + i.to_s
                 imgurl = element.css("img").attribute("src").value
                 @imgurls << imgurl
               end
-              i = i + 1
             end
           end
+=end
+
         when "last.fm"
           # parse for last.fm
         when "myspace"
           # parse for myspace.com
         when "wikipedia"
           # parse for wikipedia
+          doc = Nokogiri::HTML(open(url))
+          imgurl = "https:" + doc.xpath('//table[starts-with(@class, "infobox")]').css("img").first.attributes["src"].value
+          arr = imgurl.split("/")
+          arr.delete("thumb")
+          arr.delete_at(arr.length-1)
+          arr = arr.join("/")
+          imgurl = arr
+          imgurls << imgurl
         end
       end
     end
