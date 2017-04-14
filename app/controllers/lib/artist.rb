@@ -94,7 +94,7 @@ class Artist
 
         when "discogs"
           # This site has  very low threshold for htttp request volume
-#=begin
+=begin
           doc = Nokogiri::HTML(open(url))
           # parse for discogs.com
           gallery_url = ""
@@ -120,7 +120,7 @@ class Artist
               end
             end
           end
-#=end
+=end
 
         when "last.fm"
           # parse for last.fm
