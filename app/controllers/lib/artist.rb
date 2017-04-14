@@ -94,7 +94,7 @@ class Artist
 
         when "discogs"
           # This site has  very low threshold for htttp request volume
-=begin
+#=begin
           doc = Nokogiri::HTML(open(url))
           # parse for discogs.com
           gallery_url = ""
@@ -111,7 +111,7 @@ class Artist
             gallery = doc.css('[id="view_images"]').children.css("p")
             if gallery.first.children.css("img").count != 0
               imgurl = gallery.first.css("img").attribute("src").value
-              imgurls << imgurl
+              @imgurls << imgurl
             end
             gallery.each do |element|
               if (element.children.css("img").count != 0)
@@ -120,7 +120,7 @@ class Artist
               end
             end
           end
-=end
+#=end
 
         when "last.fm"
           # parse for last.fm
