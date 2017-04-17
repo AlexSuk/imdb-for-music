@@ -9,6 +9,10 @@
   box-sizing:         border-box;
 }
 
+body {
+  background-color: lightgray;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -53,9 +57,20 @@ input {
 
 /* header */
 
+#logo {
+  height: 80px;
+  width: 232px;
+}
+
+#logo-link:hover {
+  background-color: inherit;
+}
+
 #site_header {
   width: 100%;
-  background-color: gray;
+  background-color: #acc6ef;
+  float: left;
+  display: block;
 }
 
 #searchbar {

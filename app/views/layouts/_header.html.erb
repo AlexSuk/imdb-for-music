@@ -1,5 +1,6 @@
 <div id="site_header">
-  <h1> <%= link_to "MeloDB", root_path %><h1>
+  <!--<h1> <%= link_to "MeloDB", root_path %><h1>-->
+    <%= link_to image_tag("transparent-logo.png", id: "logo", border: 0), root_path, id: "logo-link"%>
     <%= form_tag(search_path(:q), method: :get) do %>
       <%= text_field_tag :q, params[:name], placeholder: "Search Music", id: "searchbar", class: "left" %>
       <%= submit_tag "Submit", id: "searchbutton" %>
