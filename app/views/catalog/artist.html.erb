@@ -6,6 +6,7 @@
 <%art_images = @artist.images%>
 <%if art_images.count > 0 %>
   <% art_images.each do |image_url| %>
+  <% puts image_url%>
     <img src="<%=image_url%>"></img>
   <%end%>
 <%else %>
