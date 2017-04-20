@@ -91,10 +91,10 @@ class Artist
             imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
             @imgurls << imgurl
           end
-
+=begin
         when "discogs"
           # This site has  very low threshold for htttp request volume
-=begin
+
           doc = Nokogiri::HTML(open(url))
           # parse for discogs.com
           gallery_url = ""
