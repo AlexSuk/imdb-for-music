@@ -52,11 +52,13 @@ class ReleaseGroup
       # TODO do not make this many requests to mb this fast
       #release = Musicbrainz_db.find("release", release["id"])
       release = SearchModule.find("release", release["id"])
-      track_count = release["media"].first["track-count"]
-      if (track_count > max_tracks)
-        max_tracks = track_count
-        rel = release
-      end
+      if !release["media"].nil?
+        track_count = release["media"].first["track-count"]
+       if (track_count > max_tracks)
+          max_tracks = track_count
+          rel = release
+       end
+     end
       # if this release has the most tracks, make it the best one
     end
     return rel

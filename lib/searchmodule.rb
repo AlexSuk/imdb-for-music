@@ -33,7 +33,13 @@ module SearchModule
 	end
 
 	def SearchModule.get_cover_art id
-		imgurls = MeloCache.get "cover_art"+id
-		return eval(imgurls)
+		if MeloCache.exists "cover_art"+id
+			imgurls = MeloCache.get "cover_art"+id
+			return eval(imgurls)
+		else
+			query = Musicbrainz_db.get_cover_art id
+			SearchModule.set_cover_art id, query
+			return query
+		end
 	end
 end
