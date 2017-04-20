@@ -76,6 +76,7 @@ class Artist
       if @imgurls.count < 4
         puts "url relation"
         url = relation["url"]["resource"]
+        puts url
         case relation["type"]
         when "allmusic"
           doc = Nokogiri::HTML(open(url))
