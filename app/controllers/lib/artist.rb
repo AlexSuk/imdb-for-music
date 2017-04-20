@@ -139,7 +139,7 @@ class Artist
         end
       end
     end
-
+    "images fetch return"
     return @imgurls
     # TODO check for duplicate images, maybe use phasion https://github.com/westonplatter/phashion
   end
