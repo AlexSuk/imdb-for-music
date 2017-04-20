@@ -3,8 +3,9 @@
 <script src="./app/assets/javascripts/galleria.classic.min.js"></script>
 
 <div class="galleria">
-<%if @artist.images.count > 0 %>
-  <% @artist.images.each do |image_url| %>
+<%art_images = @artist.images%>
+<%if art_images.count > 0 %>
+  <% art_images.each do |image_url| %>
     <img src="<%=image_url%>"></img>
   <%end%>
 <%else %>

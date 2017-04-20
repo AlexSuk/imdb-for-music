@@ -32,6 +32,7 @@ require 'json'
 			# FILTER BY SCORE
 			arr = []
 			response = response["#{type}s"]
+			byebug
 			response.each do |obj|
 				if obj["score"].to_i == 100
 					arr << obj
