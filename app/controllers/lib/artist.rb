@@ -121,7 +121,6 @@ class Artist
             end
           end
 =end
-
         when "last.fm"
           # parse for last.fm
         when "myspace"

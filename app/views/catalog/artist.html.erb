@@ -1,19 +1,19 @@
 <% provide(:title, @artist.name) %>
 <h1><%= @artist.name %></h1>
+<script src="./app/assets/javascripts/galleria.classic.min.js"></script>
+
+<div class="galleria">
+<%if @artist.images.count > 0 %>
+  <% @artist.images.each do |image_url| %>
+    <img src="<%=image_url%>"></img>
+  <%end%>
+<%else %>
+  <p> No images found for <%=@artist.name %></p>
+<%end%>
+</div>
 
 <% if @artist.type == "Group" %>
 <%= render 'artist_members' %>
 <%end%>
 
 <%= render 'artist_releases' %>
-
-
-<%if @artist.images.count > 0 %>
-  <% @artist.images.each do |image_url| %>
-  
-    <img src="<%=image_url%>"></img>
-  
-  <%end%>
-<%else %>
-  <p> No images found for artist </p>
-<%end%>

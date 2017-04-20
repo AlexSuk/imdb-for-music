@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// galleria code for artist images
+(function() {
+  //Galleria.loadTheme('./app/assets/javascripts/galleria.classic.min.js');
+  Galleria.run('.galleria');
+}());
