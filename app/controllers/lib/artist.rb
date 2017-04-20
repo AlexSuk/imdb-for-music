@@ -76,9 +76,10 @@ class Artist
       if @imgurls.count < 4
         puts "url relation"
         url = relation["url"]["resource"]
-        puts url
         case relation["type"]
         when "allmusic"
+          puts "ALLMUSIC*********************"
+          puts "url"
           doc = Nokogiri::HTML(open(url))
           # parse for allmusic.com
           if doc.css(".artist-image").count != 0
