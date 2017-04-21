@@ -78,6 +78,7 @@ class Artist
         url = relation["url"]["resource"]
         case relation["type"]
         when "allmusic"
+          puts "allmusic"
           doc = Nokogiri::HTML(open(url))
           # parse for allmusic.com
           if doc.css(".artist-image").count != 0
@@ -86,6 +87,7 @@ class Artist
           end
           # TODO -- can we get all images in lightbox gallery?
         when "bandsintown"
+          puts "bandsintown"
           doc = Nokogiri::HTML(open(url))
           if doc.css(".sidebar-image").count != 0
             imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
@@ -126,6 +128,7 @@ class Artist
         when "myspace"
           # parse for myspace.com
         when "wikipedia"
+          puts "wiki"
           # parse for wikipedia
           doc = Nokogiri::HTML(open(url))
           if doc.xpath('//table[starts-with(@class, "infobox")]').css("img").count!=0
@@ -140,7 +143,7 @@ class Artist
         end
       end
     end
-    "images fetch return"
+    puts "images fetch return"
     return @imgurls
     # TODO check for duplicate images, maybe use phasion https://github.com/westonplatter/phashion
   end
