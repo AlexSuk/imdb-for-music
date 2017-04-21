@@ -12,11 +12,27 @@ require 'json'
 			req = Net::HTTP::Get.new(uri)
 			#req['User-Agent'] = "Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion"
 			req['User-Agent'] = "Brandeis University - Cosi166 Capstone Project"
-			res = Net::HTTP.start(uri.hostname, uri.port) {|http|
-			  http.request(req)
-			}
-			res
+
+			count = 40
+			begin
+				res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+				  http.request(req)
+				}
+
+				count -=1
+				if(res.code  == "503")
+					puts "Musicbrainz server busy. Wait 50ms"
+					sleep 0.05
+				end
+			end while (res.code == "503") && (count>0)
+
+			if count == 0 
+				return nil
+			else
+				return res
+			end
 		end
+
 
 		# @param {String} type May be "artist", "release-group", "recording"
 		# @param {String} string The string to search
@@ -62,15 +78,23 @@ require 'json'
 			url = "http://coverartarchive.org/release-group/" + id
 			uri = URI.parse(url)
 			req = Net::HTTP::Get.new(uri)
-			res = Net::HTTP.start(uri.hostname, uri.port) {|http|
-				http.request(req)
-			}
-			if res.code == "307" #redirect
-				uri = URI.parse(res.body.split(" ")[1])
-				JSON::parse(uri.read)
-			else
-				res.body
-			end
+			count = 40
+			begin
+				res = Net::HTTP.start(uri.hostname, uri.port) {|http|
+					http.request(req)
+				}
+
+				if res.code == "307" #redirect
+					uri = URI.parse(res.body.split(" ")[1])
+					return JSON::parse(uri.read)
+				elsif res.code =="200"
+					return res.body
+				elsif res.code =="503"
+					puts "Musicbrainz server busy. Wait 50ms"
+					sleep 0.05
+				end
+			end while (res.code == "503") && (count>0)
+			nil
 		end
 
 end

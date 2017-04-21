@@ -25,9 +25,10 @@ class ReleaseGroup
   # Return album cover; if no cover found, return image with "Not found"
   def image
     #images = Musicbrainz_db.get_cover_art(self.id)["images"]
-    images = SearchModule.get_cover_art(self.id)["images"]
+
+    images = SearchModule.get_cover_art(self.id)
     if images != nil
-      return images.first["thumbnails"]["large"]
+      return images["images"].first["thumbnails"]["large"]
     else
       return 'http://djpunjab.in/cover.jpg'
     end
