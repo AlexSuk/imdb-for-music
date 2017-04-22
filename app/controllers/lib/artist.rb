@@ -163,4 +163,6 @@ class Artist
     return arr
   end
 
+  def open_url url
+  end
 end

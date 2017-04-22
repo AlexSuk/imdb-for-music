@@ -37,7 +37,11 @@ class ReleaseGroup
   # Return album tracklist JSON data
   def tracklist
     releases = @release_group_data["releases"]
-    return get_best_release(releases)["media"].first["tracks"]
+    if releases.count > 0
+      return get_best_release(releases)["media"].first["tracks"]
+    else
+      return []
+    end
   end
 
   private
