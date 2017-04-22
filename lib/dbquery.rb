@@ -8,6 +8,7 @@ require 'json'
 
 		def self.http_req path
 			url = "http://musicbrainz.org/ws/2/"+path+"&fmt=json"
+			url = url.to_ascii
 			uri = URI.parse(url)
 			req = Net::HTTP::Get.new(uri)
 			#req['User-Agent'] = "Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion"
@@ -76,6 +77,7 @@ require 'json'
 		# @param {String} id The MBID of the release-group whose cover art to find
 		def Musicbrainz_db.get_cover_art id
 			url = "http://coverartarchive.org/release-group/" + id
+			url = url.to_ascii
 			uri = URI.parse(url)
 			req = Net::HTTP::Get.new(uri)
 			count = 40
