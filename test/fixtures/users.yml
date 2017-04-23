@@ -1,8 +1,21 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+jose:
+  name: Jose Ramirez
+  email: jr@br.com
+  password_digest: <%= User.digest('password') %>
 
-# default fixtures
-#one:
-#  name: MyString
+# taken from Rails tutorial
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
 
-#two:
-#  name: MyString
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+  password_digest: <%= User.digest('password') %>
+
+malory:
+  name: Malory Archer
+  email: boss@example.gov
+  password_digest: <%= User.digest('password') %>

@@ -1,1 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+muse:
+  body: Faker::Lorem.sentence(5)
+  created_at: <%= 2.years.ago %>
+  user: archer
+  mbid: ef0d903f-edb3-45d9-a9d7-bf534b4be696
+
+nightwish:
+  body: Faker::Lorem.sentence(5)
+  created_at : <%= 3.days.ago %>
+  user: lana
+  mbid: 00a9f935-ba93-4fc8-a33a-993abe9c936b

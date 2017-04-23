@@ -10,10 +10,12 @@
 
 <%if @artist.images.count > 0 %>
   <% @artist.images.each do |image_url| %>
-  
+
     <img src="<%=image_url%>"></img>
-  
+
   <%end%>
 <%else %>
   <p> No images found for artist </p>
 <%end%>
+
+<%= render 'artist_posts' %>

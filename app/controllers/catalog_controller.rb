@@ -6,6 +6,7 @@ class CatalogController < ApplicationController
 
   def artist
     @artist = Artist.new(params["format"])
+    @posts = Post.where("mbid = ?", @artist.id).paginate(page: params[:page])
   end
 
   def release_group

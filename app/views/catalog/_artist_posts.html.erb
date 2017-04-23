@@ -1,0 +1,20 @@
+<h3>Discussion</h3>
+<table>
+  <tr>
+    <th>Post Title</th>
+    <th># comments</th>
+    <th>Date Created</th>
+    <th>Created by</th>
+  </tr>
+</table>
+
+<% @posts.each do |post| %>
+  <p>
+    <%= link_to(post.title, post.url, target: "_blank") %> - <%= link_to("Show Page", post) %>
+  </p>
+<% end %>
+<p>
+  <%= link_to("New Post", new_post_url) %>
+</p>
+
+<%= will_paginate @posts %>
