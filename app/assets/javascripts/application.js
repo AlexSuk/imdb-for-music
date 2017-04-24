@@ -18,5 +18,7 @@
 // galleria code for artist images
 (function() {
   //Galleria.loadTheme('./app/assets/javascripts/galleria.classic.min.js');
-  Galleria.run('.galleria');
+  if (document.getElementsByClassName("galleria").length != 0) {
+    Galleria.run('.galleria');
+  }
 }());
