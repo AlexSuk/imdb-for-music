@@ -1,5 +1,6 @@
 require './lib/dbquery'
 require './lib/searchmodule'
+require 'wikipedia'
 
 class Artist
 
@@ -33,6 +34,17 @@ class Artist
   # Get all relation JSON data
   def relations
     return @artist_data["relations"]
+  end
+
+  # return the URI of this artist's wikipedia page, if they have one
+  def wikipedia
+    uri = nil
+    @artist_data["relations"].each do |rel|
+      if rel["type"] == "wikipedia"
+        uri = rel["url"]["resource"]
+      end
+    end
+    return uri
   end
 
   # If artist.type is "Group", return band member JSON data
