@@ -1,6 +1,8 @@
 <% provide(:title, @artist.name) %>
 <h1><%= @artist.name %></h1>
-<script src="./app/assets/javascripts/galleria.classic.min.js"></script>
+<!--<script src="./app/assets/javascripts/galleria.classic.min.js"></script>-->
+<%= javascript_include_tag "galleria.classic.min.js" %>
+<%= javascript_include_tag "artist" %>
 
 <div class="galleria">
 <%art_images = @artist.images%>
