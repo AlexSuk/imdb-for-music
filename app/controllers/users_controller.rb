@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:edit, :destroy]
 
   # GET /users
   # GET /users.json
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
+  # TODO: how do users edit their accounts?
   def edit
   end
 
@@ -26,12 +28,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    if @user.save
-      flash[:success] = "Welcome to IMDB for Music!"
-      redirect_to @user
-    else
-      render 'new'
-    """
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -40,10 +36,10 @@ class UsersController < ApplicationController
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
-    """
     end
   end
 
+=begin
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
@@ -58,6 +54,7 @@ class UsersController < ApplicationController
     end
   end
 
+
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
@@ -67,7 +64,7 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+=end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

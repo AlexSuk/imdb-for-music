@@ -22,9 +22,9 @@ users = User.all
 
 num_post = 1
 artists.each do |artist|
-  body = Faker::Lorem.sentence(5)
   title = Faker::Lorem.sentence(3)
   users.each do |user|
+    body = Faker::Lorem.sentence(5)
     user.posts.create!(title: title, body: body, mbid: artist, url: 'posts/' + num_post.to_s)
     num_post += 1
   end
