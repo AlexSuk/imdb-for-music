@@ -2,50 +2,6 @@
 <h1>A Search</h1>
 <p> Results for "<%= @query %>"</p>
 
-<h3>Artists</h3>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-  </tr>
-
-  <% @artists.each do |artist| %>
-    <tr>
-      <td>
-        <%= link_to artist["name"], artist_path(artist["id"])%>
-        <% if (artist["disambiguation"] != nil) %>
-          <span class="disambiguation">(<%= artist["disambiguation"] %>) </span>
-        <% end %>
-      </td>
-      <td><%= artist["type"] %></td>
-    </tr>
-  <%end %>
-</table>
-
-<h3>Albums</h3>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Release Date</th>
-    <th>Artist</th>
-    <th>Thumbnail</th>
-    <th>Type</th>
-  </tr>
-
-  <% @albums.each do |album| %>
-    <tr>
-      <td><%= link_to album["title"], release_group_path(album["id"]) %></td>
-      <td><%=
-      #release_group = MusicBrainz::ReleaseGroup.find(album[:id])
-      #release_group.first_release_date
-      %>
-      </td>
-      <td>
-        <%= album["artist-credit"].first["artist"]["name"] %>
-      </td>
-      <td><%= 'todo' %></td>
-      <td><%= album["type"] %></td>
-    </tr>
-  <%end %>
-</table>
+<%= render "artist_search_results" %>
+<%= render "album_search_results" %>
+<%= render "recording_search_results" %>

@@ -1,0 +1,26 @@
+<% if @recordings.count > 0 %>
+  <h3>Recordings</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Performed By</th>
+      <th>Appears On</th>
+    </tr>
+
+    <% @recordings.each do |recording| %>
+      <tr>
+        <td>
+          <%= link_to recording["title"], recording_path(recording["id"])%>
+          <% if (recording["disambiguation"] != nil) %>
+            <span class="disambiguation">(<%= recording["disambiguation"] %>) </span>
+          <% end %>
+        </td>
+        <td><%= link_to recording["artist-credit"].first["artist"]["name"], artist_path(recording["artist-credit"].first["artist"]["id"]) %></td>
+        <td>
+          <% if recording["releases"] %>
+            <%= link_to recording["releases"].first["title"], release_group_path(recording["releases"].first["release-group"]["id"])%></td>
+          <% end %>
+      </tr>
+    <%end %>
+  </table>
+<%end%>

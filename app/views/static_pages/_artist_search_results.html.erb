@@ -1,0 +1,21 @@
+<% if @artists.count > 0 %>
+  <h3>Artists</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+    </tr>
+
+    <% @artists.each do |artist| %>
+      <tr>
+        <td>
+          <%= link_to artist["name"], artist_path(artist["id"])%>
+          <% if (artist["disambiguation"] != nil) %>
+            <span class="disambiguation">(<%= artist["disambiguation"] %>) </span>
+          <% end %>
+        </td>
+        <td><%= artist["type"] %></td>
+      </tr>
+    <%end %>
+  </table>
+<%end %>
