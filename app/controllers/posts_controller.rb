@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :logged_in_user, only: [:new, :create, :edit, :destroy]
+  before_action :correct_user, only: :destroy
+
   def index
     @posts = Post.all
   end
@@ -25,12 +28,22 @@ class PostsController < ApplicationController
     end
   end
 
-  def reply
-    @post = Post.find(params[:id])
+  def destroy
+    @post.destroy
+    flash[:success] = "Post destroyed"
+    redirect_to request.referrer || root_url
   end
 
-  def post_params
-    params.require(:post).permit(:title, :comment, :user_id, :body)
-  end
+
+  private
+
+    def post_params
+      params.require(:post).permit(:title, :comment, :user_id, :body)
+    end
+
+    def correct_user
+      @post = current_user.posts.find_by_id(params[:id])
+      redirect_to root_url if @post.nil?
+    end
 
 end

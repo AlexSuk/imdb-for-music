@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170326172417) do
+ActiveRecord::Schema.define(version: 20170423051436) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170326172417) do
     t.datetime "updated_at", null: false
     t.string   "mbid"
     t.string   "url"
+    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
   end
 
   create_table "reviews", force: :cascade do |t|

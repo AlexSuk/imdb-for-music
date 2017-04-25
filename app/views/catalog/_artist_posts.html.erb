@@ -1,0 +1,21 @@
+<h3>Discussion</h3>
+<table>
+  <tr>
+    <th>Post Title </th>
+    <th># comments </th>
+    <th>Date Created </th>
+    <th>Created by </th>
+  </tr>
+</table>
+<p>
+  <%= link_to("Create a new post", new_post_url) %>
+</p>
+<% @posts.each do |post| %>
+  <p>
+    <%= link_to(post.title, post.url, target: "_blank") %>
+    <%= post.comments.length %>
+    <%= post.created_at %>,
+    <%= User.find_by_id(post.user_id).name %>
+  </p>
+<% end %>
+<%= will_paginate @posts %>

@@ -2,6 +2,11 @@
 <%= link_to(@post.title, @post.url, target: "_blank") %><br/>
 <small>Submitted <%= time_ago_in_words(@post.created_at) %> ago</small>
 <p><%= @post.body %></p>
+<p>
+  <% if current_user == User.find_by_id(@post.user_id) %>
+    <%= link_to "delete", @post, method: :delete, data: { Confirm: "Are you sure?"} %>
+  <% end %>
+<p>
 
 <h3>Comments</h3>
 

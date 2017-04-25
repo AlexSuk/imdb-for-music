@@ -47,6 +47,8 @@ gem 'rails-controller-testing'
 
 #this gem allows to convert any string to ascii
 gem 'stringex'
+# For showing sample users, posts
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

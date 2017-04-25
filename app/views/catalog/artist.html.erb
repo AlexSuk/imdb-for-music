@@ -6,7 +6,7 @@
 <%art_images = @artist.images%>
 <%if art_images.count > 0 %>
   <% art_images.each do |image_url| %>
-    <img src="<%=image_url%>"></img> 
+    <img src="<%=image_url%>"></img>
   <%end%>
 <%else %>
   <p> No images found for <%=@artist.name %></p>
@@ -18,3 +18,5 @@
 <%end%>
 
 <%= render 'artist_releases' %>
+
+<%= render 'artist_posts' %>
