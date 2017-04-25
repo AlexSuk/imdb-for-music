@@ -141,6 +141,12 @@ class Artist
           # parse for myspace.com
         when "wikipedia"
           puts "wiki"
+          Wikipedia.find(url).image_urls.each do |url|
+            @imgurls << url
+            # TODO DO NOT PUT SVG FILES HERE
+          end
+
+=begin
           # parse for wikipedia
           doc = Nokogiri::HTML(open(url))
           if doc.xpath('//table[starts-with(@class, "infobox")]').css("img").count!=0
@@ -152,6 +158,7 @@ class Artist
             imgurl = arr
             @imgurls << imgurl
           end
+=end
         end
       end
     end

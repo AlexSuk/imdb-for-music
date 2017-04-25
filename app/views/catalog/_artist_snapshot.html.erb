@@ -1,4 +1,12 @@
 <div id="artist-snapshot" class="row">
+  <div id="artist-bio" class="col-lg-6">
+    <% if @bio != nil %>
+      <p><%= @bio %></p>
+    <%else%>
+      <p>No bio found </p>
+    <% end %>
+  </div>
+
   <div class="col-lg-6">
     <%art_images = @artist.images%>
     <%if art_images.count > 0 %>
@@ -10,13 +18,5 @@
     <%else %>
       <p> No images found for <%=@artist.name %></p>
     <%end%>
-  </div>
-
-  <div id="artist-bio" class="col-lg-6">
-    <% if @bio != nil %>
-      <p><%= @bio %></p>
-    <%else%>
-      <p>No bio found </p>
-    <% end %>
   </div>
 </div>
