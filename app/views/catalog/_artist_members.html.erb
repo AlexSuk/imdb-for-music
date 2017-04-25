@@ -1,57 +1,67 @@
 <% if @artist.band_members != [] %>
-  <h3>Current Members </h3>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Instrument</th>
-      <th>Years</th>
-    </tr>
-
-    <% @artist.band_members[:current].each do |member| %>
-      <tr>
-        <% if member["artist"]["id"] %>
-          <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
-        <% else %>
-          <td> <%= member["artist"]["name"] %> </td>
-        <%end%>
-        <td> <%= member["attributes"].join(", ") %> </td>
-        <% if !member["begin"].nil? %> 
-        <% if member["begin"].include? "-" %> 
-        <td> <%= member["begin"].split("-")[0].to_s + "-" + Date.today.year.to_s %> </td>
-        <% else %>
-        <td> <%= member["begin"].to_s + "-" + Date.today.year.to_s %> </td>
-        <% end %> 
-        <% end %> 
-      </tr>
+  <div class="row">
+    <% if @artist.band_members[:former] != [] %>
+      <div class="col-lg-6">
+    <% else %>
+      <div class="col-lg-12">
     <%end%>
+      <h3>Current Members </h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Instrument</th>
+          <th>Years</th>
+        </tr>
 
-  </table>
-<%end %>
-
-<% if @artist.band_members[:former] != [] %>
-  <h3>Former Members</h3>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Instrument</th>
-      <th>Years</th>
-    </tr>
-
-    <% @artist.band_members[:former].each do |member| %>
-      <tr>
-        <% if !member["artist"]["id"].nil? %>
-          <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
-        <% else %>
-          <td> <%= member["artist"]["name"] %> </td>
+        <% @artist.band_members[:current].each do |member| %>
+          <tr>
+            <% if member["artist"]["id"] %>
+              <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
+            <% else %>
+              <td> <%= member["artist"]["name"] %> </td>
+            <%end%>
+            <td> <%= member["attributes"].join(", ") %> </td>
+            <% if !member["begin"].nil? %>
+            <% if member["begin"].include? "-" %>
+            <td> <%= member["begin"].split("-")[0].to_s + "-" + Date.today.year.to_s %> </td>
+            <% else %>
+            <td> <%= member["begin"].to_s + "-" + Date.today.year.to_s %> </td>
+            <% end %>
+            <% end %>
+          </tr>
         <%end%>
-        <td> <%= member["attributes"].join(", ") %> </td>
-        <% if !member["begin"].nil? %>
-          <td> <%= member["begin"].split("-")[0].to_s + "-" + (member["end"] || "") %> </td>
-        <% else %>
-          <td> unknown </td>
-        <%end%>
-      </tr>
-    <%end%>
 
-  </table>
+      </table>
+    </div> <!-- end first column -->
+  <%end %>
+
+  <% if @artist.band_members[:former] != [] %>
+    <div class="col-lg-6">
+      <h3>Former Members</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Instrument</th>
+          <th>Years</th>
+        </tr>
+
+        <% @artist.band_members[:former].each do |member| %>
+          <tr>
+            <% if !member["artist"]["id"].nil? %>
+              <td> <%= link_to member["artist"]["name"], artist_path(member["artist"]["id"]) %> </td>
+            <% else %>
+              <td> <%= member["artist"]["name"] %> </td>
+            <%end%>
+            <td> <%= member["attributes"].join(", ") %> </td>
+            <% if !member["begin"].nil? %>
+              <td> <%= member["begin"].split("-")[0].to_s + "-" + (member["end"] || "") %> </td>
+            <% else %>
+              <td> unknown </td>
+            <%end%>
+          </tr>
+        <%end%>
+
+      </table>
+    </div> <!-- end second column div -->
+  </div> <!-- end row div -->
 <%end%>

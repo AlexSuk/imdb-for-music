@@ -16,4 +16,7 @@ class StaticPagesController < ApplicationController
     @recordings = SearchModule.search("recording", @query)
   end
 
+  def test
+  end
+
 end

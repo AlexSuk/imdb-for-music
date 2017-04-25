@@ -3,33 +3,11 @@
 <%= javascript_include_tag "galleria.classic.min.js" %>
 <%= javascript_include_tag "artist" %>
 
-<div class="container">
-  <div id="artist-snapshot row">
-    <div class="galleria col">
-    <%art_images = @artist.images%>
-    <%if art_images.count > 0 %>
-      <% art_images.each do |image_url| %>
-        <img src="<%=image_url%>"></img>
-      <%end%>
-    <%else %>
-      <p> No images found for <%=@artist.name %></p>
-    <%end%>
-    </div>
+<%= render 'artist_snapshot' %>
 
-    <div id="artist-bio" class="col">
-      <% if @bio != nil %>
-        <p><%= @bio %></p>
-      <%else%>
-        <p>No bio found </p>
-      <% end %>
-    </div>
-  </div>
-
-  <% if @artist.type == "Group" %>
+<% if @artist.type == "Group" %>
   <%= render 'artist_members' %>
-  <%end%>
+<%end%>
 
-  <%= render 'artist_releases' %>
-
-  <%= render 'artist_posts' %>
-</div>
+<%= render 'artist_releases' %>
+<%= render 'artist_posts' %>

@@ -92,4 +92,9 @@ footer {
 }
 
 /* artist page */
-.galleria{ max-width: 50%; height: 400px; background: #000 }
+.galleria{ max-width: 100%; height: 400px;}
+
+#artist-bio {
+  max-height: 400px;
+  overflow: scroll;
+}

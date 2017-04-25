@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   get '/artist',        to: 'catalog#artist'
   get '/release-group', to: 'catalog#release_group'
-  get 'recording',      to: 'catalog#recording'
+  get 'recording',      to: 'catalog#recording'\
+
+  get '/test',          to: 'static_pages#test'
 
   get  '/signup',   to: 'users#new'
   get  '/login',    to: 'sessions#new'
