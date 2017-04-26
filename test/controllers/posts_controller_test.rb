@@ -19,7 +19,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to login_url
   end
 
-  test "should redirect destroy for wrong posts" do
+  test "should redirect destroy for wrong user" do
     log_in_as(users(:lana))
     post = posts(:muse)
     assert_no_difference 'Post.count' do
