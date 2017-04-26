@@ -9,5 +9,9 @@
   <%= render 'artist_members' %>
 <%end%>
 
+<% if @artist.type == "Person" %>
+  <%= render 'artist_associated_acts' %>'
+<%end%>
+
 <%= render 'artist_releases' %>
 <%= render 'artist_posts' %>

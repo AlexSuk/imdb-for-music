@@ -66,6 +66,22 @@ class Artist
     end
   end
 
+  # if artist type is "Person", return artist's band's (if they exist)
+  def associated_acts
+    if self.type == "Person"
+      arr = Array.new
+      artist_relations = get_relations(self.relations, "artist")
+      artist_relations.each do |relation|
+        if relation["type"] == "member of band"
+          arr << relation
+        end
+      end
+      return arr
+    else
+      return nil
+    end
+  end
+
   def images
     if !(SearchModule.exists_cover_art @artist_data["id"])
       @imgurls = self.images_fetch

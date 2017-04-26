@@ -1,0 +1,25 @@
+<h3>Associated Acts</h3>
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Role</th>
+    <th>Years</th>
+  </tr>
+
+  <% @artist.associated_acts.each do |act| %>
+    <tr>
+      <% if act["artist"]["id"] %>
+        <td> <%= link_to act["artist"]["name"], artist_path(act["artist"]["id"]) %> </td>
+      <% else %>
+        <td> <%= act["artist"]["name"] %> </td>
+      <%end%>
+      <td> <%= act["attributes"].join(", ") %> </td>
+      <% if !act["ended"] %>
+          <td> <%= act["begin"].to_s + "-present" %> </td>
+      <% else %>
+        <td> <%= act["begin"] + "-" + act["end"] %> </td>
+      <% end%>
+    </tr>
+  <%end%>
+
+</table>
