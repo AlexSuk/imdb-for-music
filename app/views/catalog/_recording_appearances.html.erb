@@ -4,7 +4,11 @@
     <%
     date = nil
     if release["first-release-date"].include? "-"
-      date = Date.parse(release["first-release-date"]).year.to_s
+      release["first-release-date"].split("-").each do |part|
+        if part.length == 4
+          date = part
+        end
+      end
     else
       date = release["first-release-date"]
     end

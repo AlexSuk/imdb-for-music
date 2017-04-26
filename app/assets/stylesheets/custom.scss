@@ -98,3 +98,13 @@ footer {
   max-height: 400px;
   overflow: scroll;
 }
+
+/* release_group page*/
+
+#release-group-image {
+  padding-top:100%;
+  margin-top: -100%;
+  width: 100%;
+  position: relative;
+  z-index: -1000;
+}

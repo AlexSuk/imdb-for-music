@@ -7,6 +7,12 @@
   %>
   (<%= date %>)</h1>
 <h3>By <%= link_to @release_group.artist["name"], artist_path(@release_group.artist["id"]) %></h3>
-<img style="height: 300px; width: 300px;" src="<%=@release_group.image %>"></img>
 
-<%= render 'release_group_tracklist' %>
+<div class="row">
+  <div class="col-lg-6">
+    <img id="release-group-image" src="<%=@release_group.image %>"></img>
+  </div>
+  <div class="col-lg-6">
+    <%= render 'release_group_tracklist' %>
+  </div>
+</div>
