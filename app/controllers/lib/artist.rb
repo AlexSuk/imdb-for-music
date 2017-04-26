@@ -96,6 +96,7 @@ class Artist
             imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
             @imgurls << imgurl
           end
+          puts "exit allmusic"
           # TODO -- can we get all images in lightbox gallery?
         when "bandsintown"
           puts "bandsintown"
@@ -104,6 +105,7 @@ class Artist
             imgurl = doc.css(".sidebar-image").css("img").attribute("src").value
             @imgurls << imgurl
           end
+          puts "exit bandsintown"
 =begin
         when "discogs"
           # This site has  very low threshold for htttp request volume
@@ -144,6 +146,7 @@ class Artist
             # TODO DO NOT PUT SVG FILES HERE
             @imgurls << url unless url.include?(".svg")
           end
+          puts "exit wiki"
         end
       end
     end
