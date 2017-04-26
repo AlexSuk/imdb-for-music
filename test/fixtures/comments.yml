@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+muse_one:
   body: MyText
-  commentable_id: 1
-  commentable_type: MyString
-  user_id: 1
+  commentable_id: 66643357
+  commentable_type: Post
+  user: lana
 
-two:
+muse_2:
   body: MyText
-  commentable_id: 1
-  commentable_type: MyString
-  user_id: 1
+  commentable_id: 448484043
+  commentable_type: Comment
+  user: jose
