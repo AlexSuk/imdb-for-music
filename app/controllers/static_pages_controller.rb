@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
 
   # search results page
   def search
-    @query = params[:q]
+    @query = params[:q] + " "
     @artists = SearchModule.search("artist", @query)
     @albums = SearchModule.search("release-group", @query)
     @recordings = SearchModule.search("recording", @query)

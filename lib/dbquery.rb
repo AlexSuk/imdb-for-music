@@ -27,7 +27,7 @@ require 'json'
 				end
 			end while (res.code == "503") && (count>0)
 
-			if count == 0 
+			if count == 0
 				return nil
 			else
 				return res
@@ -44,13 +44,14 @@ require 'json'
 			else
 				path = type + "/?query=" + string
 			end
+
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
 			# FILTER BY SCORE
 			arr = []
 			response = response["#{type}s"]
 			response.each do |obj|
-				if obj["score"].to_i == 100
+				if obj["score"].to_i > 75
 					arr << obj
 				end
 			end

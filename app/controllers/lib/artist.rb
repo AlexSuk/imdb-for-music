@@ -67,7 +67,6 @@ class Artist
   end
 
   def images
-    #byebug
     if !(SearchModule.exists_cover_art @artist_data["id"])
       @imgurls = self.images_fetch
       SearchModule.set_cover_art @artist_data["id"], @imgurls
@@ -142,23 +141,9 @@ class Artist
         when "wikipedia"
           puts "wiki"
           Wikipedia.find(url).image_urls.each do |url|
-            @imgurls << url
             # TODO DO NOT PUT SVG FILES HERE
+            @imgurls << url unless url.include?(".svg")
           end
-
-=begin
-          # parse for wikipedia
-          doc = Nokogiri::HTML(open(url))
-          if doc.xpath('//table[starts-with(@class, "infobox")]').css("img").count!=0
-            imgurl = "https:" + doc.xpath('//table[starts-with(@class, "infobox")]').css("img").first.attributes["src"].value
-            arr = imgurl.split("/")
-            arr.delete("thumb")
-            arr.delete_at(arr.length-1)
-            arr = arr.join("/")
-            imgurl = arr
-            @imgurls << imgurl
-          end
-=end
         end
       end
     end
