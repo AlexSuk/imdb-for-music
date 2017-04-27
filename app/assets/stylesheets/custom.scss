@@ -13,6 +13,11 @@ body {
   background-color: lightgray;
 }
 
+section {
+  padding-bottom: 10px;
+  border-bottom: 1px gray solid;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
