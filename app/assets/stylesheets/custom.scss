@@ -9,6 +9,9 @@
   box-sizing:         border-box;
 }
 
+$color1: lightblue;
+$color2: beige;
+
 body {
   background-color: lightgray;
 }
@@ -16,6 +19,14 @@ body {
 section {
   padding-bottom: 10px;
   border-bottom: 1px gray solid;
+}
+
+.color1 {
+  background-color: $color1;
+}
+
+.color2 {
+  background-color: $color2;
 }
 
 /* forms */
@@ -101,7 +112,7 @@ footer {
 
 #artist-bio {
   max-height: 400px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* release_group page*/

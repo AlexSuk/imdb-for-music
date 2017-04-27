@@ -3,24 +3,24 @@
 <%= javascript_include_tag "galleria.classic.min.js" %>
 <%= javascript_include_tag "artist" %>
 
-<section>
+<section class="color1">
   <%= render 'artist_snapshot' %>
 </section>
 
 <% if @artist.type == "Group" %>
-  <section>
+  <section class="color2">
     <%= render 'artist_members' %>
   </section>
 <%end%>
 
 <% if @artist.type == "Person" %>
-  <section>
+  <section class="color2">
     <%= render 'artist_associated_acts' %>
   </section>
 <%end%>
 
 <%if @artist.release_groups.count > 0%>
-  <section>
+  <section class="color1">
     <%= render 'artist_releases' %>
   </section>
 <%end%>
