@@ -4,8 +4,8 @@ class PostTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:jose)
-    @post = @user.posts.build(body: "Lorem ipsum", user_id: @user.id)
-    #@post = Posts.new(body: "Lorem ipsum", user_id: @user.id)
+    @post = @user.posts.build(title: "Lorem", body: "Lorem ipsum", user_id: @user.id,
+                              mbid: "ef0d903f-edb3-45d9-a9d7-bf534b4be696" )
   end
 
   test "should be valid" do
