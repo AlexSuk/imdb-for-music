@@ -12,12 +12,13 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params)
     @comment.user_id = current_user.id
 
+
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @commentable, notice: 'You Successfully Posted!' }
+        format.html { redirect_to :back, notice: 'You Successfully Posted!' }
         format.json { render :show, status: :created, location: @commentable }
       else
-        format.html { redirect_to @commentable, notice: "Your comment wasn't posted. Please try again."}
+        format.html { redirect_to :back, notice: "Your comment wasn't posted. Please try again."}
         format.json { render json: @commentable.errors, status: :unprocessable_entity }
       end
     end

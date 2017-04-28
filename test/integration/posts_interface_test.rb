@@ -18,29 +18,15 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
     # Valid submission
     title = "Sample Title"
     body = "Sample post"
+    mbid = "ef0d903f-edb3-45d9-a9d7-bf534b4be696"
     assert_difference 'Post.count', 1 do
-      post posts_path, params: { post: { user_id: @user.id, title: title, body: body } }
+      post posts_path, params: { post: { user_id: @user.id, title: title, body: body, mbid: mbid } }
     end
     assert_redirected_to post_url(Post.last)
     follow_redirect!
     assert_match body, response.body
-
-=begin
-    # Invalid comment submission
-    # Valid comment submission
-    @user2 = users(:lana)
-    log_in_as(@user2)
-    body = "Sample comment"
-    assert_difference 'Comment.count', 1 do
-      post post_comments_path(post_id: Post.last.id), params: { comment: { user_id: @user2.id, body: body } }
-    end
-    assert_redirected_to post_url(Post.last)
-    follow_redirect!
-    assert_match body, response.body
-=end
 
     # Delete post
-    #get user_path(@user2)
     assert_select 'a', text: 'delete', count: 1
     first_post = @user.posts.paginate(page: 1).first
     assert_difference 'Post.count', -1 do

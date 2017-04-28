@@ -4,6 +4,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+
+    # after changing routes to look something like artist.:mbid/posts
+    #@posts = Post.where(":mbid = ?", params[:artist_id])
   end
 
   def show
@@ -38,7 +41,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :user_id, :comment, :body)
+      params.require(:post).permit(:title, :user_id, :comment, :body, :mbid)
     end
 
     def correct_user
