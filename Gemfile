@@ -24,6 +24,10 @@ gem 'redis'
 
 gem 'wikipedia-client'
 
+gem 'omniauth'
+gem 'omniauth-oauth2', '~> 1.3.1'
+gem 'omniauth-facebook', '3.0.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
