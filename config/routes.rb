@@ -6,6 +6,15 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   get '/artist',        to: 'catalog#artist'
+=begin
+  # posts resources
+  get '/artist.:mbid/posts',                to: 'posts#index'
+  get '/artist.:mbid/posts/new',            to: 'posts#new'
+  post '/artist.:mbid/posts',               to: 'posts#create'
+  get '/artist.:mbid/posts/:post_id',       to: 'posts#show'
+  delete '/artist.:mbid/posts/:post_id',    to: 'posts#destroy'
+=end
+
   get '/release-group', to: 'catalog#release_group'
   get 'recording',      to: 'catalog#recording'\
 
@@ -19,6 +28,7 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
 
   resources :users
+
   resources :posts do
     resources :comments
   end
