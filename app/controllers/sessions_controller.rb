@@ -26,6 +26,7 @@ class SessionsController < ApplicationController
         @user.password = "foobar"
         respond_to do |format|
           if @user.save
+            log_in @user
             puts "user save successful"
             format.html { redirect_to @user, notice: 'User was successfully created.' }
             format.json { render :show, status: :created, location: @user }
