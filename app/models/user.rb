@@ -14,7 +14,7 @@ class User < ApplicationRecord
   # 3.  create authenticate() method which returns a user when pw is correct
   # model requires password_digest attribute
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, unless: :provider?
   has_many :reviews
   has_many :posts, dependent: :destroy
   has_many :comments

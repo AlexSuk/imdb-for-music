@@ -11,7 +11,15 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    #@user = User.find(params[:id])
+    p = params
+    @user = User.find(params[:id])
+    @loggedUser = User.find_by(id: session[:user_id])
+    if @loggedUser.nil?
+      redirect_to root_url
+    elsif @user.id != @loggedUser.id
+      redirect_to 'users/#{@loggedUser.id}'
+    end
+    @favorites = Favorite.where("favorites.user_id = ?", "#{@user.id}")
   end
 
   # GET /users/new
@@ -30,6 +38,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -65,6 +74,30 @@ class UsersController < ApplicationController
     end
   end
 =end
+
+  def add_favorite
+    fav = Favorite.new
+    fav.user_id = params[:user_id]
+    fav.link = params[:link]
+    fav.m_category = params[:m_category]
+    fav.save!
+  end
+
+  def remove_favorite
+    Favorite.where("user_id = ? AND link = ?", "#{params[:user_id]}", "#{params[:link]}").destroy_all
+  end
+
+  def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
+      user.oauth_token = auth.credentials.token
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
