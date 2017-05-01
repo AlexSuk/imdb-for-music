@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     elsif @user.id != @loggedUser.id
       redirect_to 'users/#{@loggedUser.id}'
     end
+    @favorites = Favorite.where("favorites.user_id = ?", "#{@user.id}")
   end
 
   # GET /users/new
@@ -73,6 +74,18 @@ class UsersController < ApplicationController
     end
   end
 =end
+
+  def add_favorite
+    fav = Favorite.new
+    fav.user_id = params[:user_id]
+    fav.link = params[:link]
+    fav.m_category = params[:m_category]
+    fav.save!
+  end
+
+  def remove_favorite
+    Favorite.where("user_id = ? AND link = ?", "#{params[:user_id]}", "#{params[:link]}").destroy_all
+  end
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

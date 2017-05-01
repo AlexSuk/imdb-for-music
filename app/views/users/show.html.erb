@@ -1,1 +1,13 @@
 <%= @user.name %>, <%= @user.email %>
+<table>
+<% @favorites.each do |fav| %>
+    <tr>
+      <td><%= fav.m_category %></td>
+      <td><%= fav.link %></td>
+      <td>
+        <% flash.each do |key, value| %> <div class="flash <%= key %>"><%= value %></div> <% end %>
+        <%= button_to 'Remove', {:controller => "users", :action => "remove_favorite", :user_id=> fav.user_id,  :link=> fav.link }, :method=>:post %>
+      </td>
+    </tr>
+  <% end %>
+</table>
