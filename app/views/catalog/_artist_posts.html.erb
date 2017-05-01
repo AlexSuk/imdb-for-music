@@ -8,7 +8,7 @@
   </tr>
 </table>
 <p>
-  <%= link_to("Create a new post", new_post_url) %>
+  <%= link_to("Create a new post", artist_new_post_path(mbid: params[:format])) %>
 </p>
 <% @posts.each do |post| %>
   <p>
