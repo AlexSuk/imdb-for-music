@@ -11,7 +11,14 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    #@user = User.find(params[:id])
+    p = params
+    @user = User.find(params[:id])
+    @loggedUser = User.find_by(id: session[:user_id])
+    if @loggedUser.nil?
+      redirect_to root_url
+    elsif @user.id != @loggedUser.id
+      redirect_to 'users/#{@loggedUser.id}'
+    end
   end
 
   # GET /users/new
