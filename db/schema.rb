@@ -53,8 +53,6 @@ ActiveRecord::Schema.define(version: 20170501025444) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "email"
-    t.string   "provider"
-    t.string   "uid"
   end
 
 end
