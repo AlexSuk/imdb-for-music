@@ -1,9 +1,9 @@
 <h1>Posts</h1>
 <% @posts.each do |post| %>
   <p>
-    <%= link_to(post.title, post.url, target: "_blank") %> - <%= link_to("Show Page", post) %>
+    <%= link_to(post.title, post.url, target: "_blank") %>
   </p>
 <% end %>
 <p>
-  <%= link_to("New Post", 'new' ) %>
+  <%= link_to("New Post", new_post_path(mbid: params[:mbid]) ) %>
 </p>

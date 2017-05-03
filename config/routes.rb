@@ -5,15 +5,15 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+
   get '/artist',        to: 'catalog#artist'
-=begin
-  # posts resources
-  get '/artist.:mbid/posts',                to: 'posts#index'
-  get '/artist.:mbid/posts/new',            to: 'posts#new'
-  post '/artist.:mbid/posts',               to: 'posts#create'
-  get '/artist.:mbid/posts/:post_id',       to: 'posts#show'
-  delete '/artist.:mbid/posts/:post_id',    to: 'posts#destroy'
-=end
+
+  # posts routes
+  get '/artist.:mbid/posts',                to: 'posts#index', as: 'posts'
+  get '/artist.:mbid/posts/new',            to: 'posts#new', as: 'new_post'
+  post '/artist.:mbid/posts',               to: 'posts#create', as: 'create_post'
+  delete '/artist.:mbid/posts/:id',         to: 'posts#destroy', as: 'delete_post'
+  get '/artist.:mbid/posts/:id',              to: 'posts#show', as: 'post'
 
   get '/release-group', to: 'catalog#release_group'
   get 'recording',      to: 'catalog#recording'\

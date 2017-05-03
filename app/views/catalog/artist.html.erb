@@ -1,5 +1,6 @@
 <% provide(:title, @artist.name) %>
 <h1><%= @artist.name %></h1>
+<% (byebug) %>
 <%= javascript_include_tag "galleria.classic.min.js" %>
 <%= javascript_include_tag "artist" %>
 <%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "artist", :user_id => session[:user_id], :link => request.env['PATH_INFO'] }, :method=>:post %>
