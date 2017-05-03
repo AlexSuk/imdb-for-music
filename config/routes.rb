@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+
   get '/artist',        to: 'catalog#artist'
 
-  # posts resources
+  # posts routes
   get '/artist.:mbid/posts',                to: 'posts#index', as: 'posts'
   get '/artist.:mbid/posts/new',            to: 'posts#new', as: 'new_post'
   post '/artist.:mbid/posts',               to: 'posts#create', as: 'create_post'
@@ -25,9 +26,11 @@ Rails.application.routes.draw do
   delete '/logout',   to: 'sessions#destroy'
 
   resources :users
+
   resources :posts do
     resources :comments
   end
+
   resources :comments do
     resources :comments
   end

@@ -3,10 +3,7 @@ class PostsController < ApplicationController
   before_action :correct_user, only: :destroy
 
   def index
-    @posts = Post.all
-
-    # after changing routes to look something like artist.:mbid/posts
-    #@posts = Post.where(":mbid = ?", params[:artist_id])
+    @posts = Post.where("mbid = ?", params[:mbid])
   end
 
   def show
@@ -14,18 +11,15 @@ class PostsController < ApplicationController
   end
 
   def new
-    (byebug)
     @post = Post.new
   end
 
   def create
-    (byebug)
     @post = current_user.posts.create(post_params)
-    (byebug)
     respond_to do |format|
-      (byebug)
       if @post.save
-        (byebug)
+        @post.url = post_path(id: @post.id)
+        @post.save
         format.html { redirect_to post_path(id: @post.id), notice: 'You Successfully Posted!' }
         format.json { render :show, status: :created, location: @post }
       else
