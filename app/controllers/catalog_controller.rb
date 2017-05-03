@@ -5,7 +5,6 @@ require 'lib/recording'
 class CatalogController < ApplicationController
 
   def artist
-    (byebug)
     @artist = Artist.new(params["format"])
     @posts = Post.where("mbid = ?", @artist.id).paginate(page: params[:page])
     @bio = Wikipedia.find(@artist.wikipedia).summary.split("\n") unless @artist.wikipedia == nil
