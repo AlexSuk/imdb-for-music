@@ -19,11 +19,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
-
+    (byebug)
+    @post = current_user.posts.create(post_params)
+    (byebug)
     respond_to do |format|
+      (byebug)
       if @post.save
-        format.html { redirect_to @post, notice: 'You Successfully Posted!' }
+        (byebug)
+        format.html { redirect_to post_path(id: @post.id), notice: 'You Successfully Posted!' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -42,7 +45,8 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :user_id, :comment, :body, :mbid)
+      (byebug)
+      params.require(:post).permit(:id, :title, :user_id, :comment, :body, :mbid)
     end
 
     def correct_user

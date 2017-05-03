@@ -1,5 +1,5 @@
 <h1>New Post</h1>
-<%= form_for('posts') do |f| %>
+<%= form_for(@post, format: :html) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -11,8 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field(:mbid, :value => params[:mbid]) %>
   <% (byebug) %>
-  <%= hidden_field_tag :mbid, params[:mbid] %>
 
   <div class="field">
     <%= f.label :title %>
