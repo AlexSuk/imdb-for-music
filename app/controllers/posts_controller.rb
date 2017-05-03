@@ -39,7 +39,6 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      (byebug)
       params.require(:post).permit(:id, :title, :user_id, :comment, :body, :mbid)
     end
 
