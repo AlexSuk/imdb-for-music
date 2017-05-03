@@ -1,5 +1,6 @@
 <% provide(:title, @recording.name) %>
 <h1><%= @recording.name %></h1>
 <h3>By <%= link_to @recording.artist["name"], artist_path(@recording.artist["id"]) %></h3>
+<%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "song", :user_id => session[:user_id], :link => request.env['PATH_INFO'] }, :method=>:post %>
 
 <%= render 'recording_appearances' %>

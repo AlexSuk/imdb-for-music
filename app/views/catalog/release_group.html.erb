@@ -1,4 +1,5 @@
 <% provide(:title, @release_group.name) %>
+<%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'] }, :method=>:post %>
 <h1> <%= @release_group.name %>
   <%
   date = nil

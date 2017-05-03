@@ -19,7 +19,10 @@ class UsersController < ApplicationController
     elsif @user.id != @loggedUser.id
       redirect_to 'users/#{@loggedUser.id}'
     end
-    @favorites = Favorite.where("favorites.user_id = ?", "#{@user.id}")
+    @favoriteArtists = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'artist'", "#{@user.id}")
+    @favoriteAlbums = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'album'", "#{@user.id}")
+    @favoriteSongs = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'song'", "#{@user.id}")
+
   end
 
   # GET /users/new

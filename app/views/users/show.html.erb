@@ -1,7 +1,33 @@
 <%= @user.name %>, <%= @user.email %>
 <%= link_to "Edit Profile", edit_user_path(@user) %>
+<h2>Favorite Artists</>
 <table>
-<% @favorites.each do |fav| %>
+<% @favoriteArtists.each do |fav| %>
+    <tr>
+      <td><%= fav.m_category %></td>
+      <td><%= fav.link %></td>
+      <td>
+        <% flash.each do |key, value| %> <div class="flash <%= key %>"><%= value %></div> <% end %>
+        <%= button_to 'Remove', {:controller => "users", :action => "remove_favorite", :user_id=> fav.user_id,  :link=> fav.link }, :method=>:post %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<h2>Favorite Albums</>
+<table>
+<% @favoriteAlbums.each do |fav| %>
+    <tr>
+      <td><%= fav.m_category %></td>
+      <td><%= fav.link %></td>
+      <td>
+        <% flash.each do |key, value| %> <div class="flash <%= key %>"><%= value %></div> <% end %>
+        <%= button_to 'Remove', {:controller => "users", :action => "remove_favorite", :user_id=> fav.user_id,  :link=> fav.link }, :method=>:post %>
+      </td>
+    </tr>
+  <% end %>
+</table><h2>Favorite Songs</>
+<table>
+<% @favoriteSongs.each do |fav| %>
     <tr>
       <td><%= fav.m_category %></td>
       <td><%= fav.link %></td>
