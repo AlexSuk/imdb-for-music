@@ -22,6 +22,10 @@ class ReleaseGroup
     return @release_group_data["artist-credit"].first["artist"]
   end
 
+  def type
+    return @release_group_data["primary-type"]
+  end
+
   # Return album cover; if no cover found, return image with "Not found"
   def image
     #images = Musicbrainz_db.get_cover_art(self.id)["images"]

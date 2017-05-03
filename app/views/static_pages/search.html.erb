@@ -1,6 +1,14 @@
 <% provide(:title, "Results for #{@query}") %>
 <h3> Results for "<%= @query %>"</h3>
 
-<%= render "artist_search_results" %>
-<%= render "album_search_results" %>
-<%= render "recording_search_results" %>
+<% if @filter == "Artist" || @filter == "Any" %>
+  <%= render "artist_search_results" %>
+<%end%>
+
+<% if @filter == "Release" || @filter == "Any" %>
+  <%= render "album_search_results" %>
+<%end%>
+
+<% if @filter == "Recording" || @filter == "Any" %>
+  <%= render "recording_search_results" %>
+<%end%>

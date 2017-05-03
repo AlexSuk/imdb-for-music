@@ -45,6 +45,7 @@ require 'json'
 				path = type + "/?query=" + string
 			end
 
+
 			res = Musicbrainz_db.http_req path
 			response = JSON::parse res.body
 			# FILTER BY SCORE
