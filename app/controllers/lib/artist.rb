@@ -106,7 +106,7 @@ class Artist
         case relation["type"]
         when "allmusic"
           puts "allmusic"
-          doc = Nokogiri::HTML(open(url))
+          doc = Nokogiri::HTML(open(url,'User-Agent' => 'firefox'))
           # parse for allmusic.com
           if doc.css(".artist-image").count != 0
             imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
