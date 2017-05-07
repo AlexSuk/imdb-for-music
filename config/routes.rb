@@ -4,17 +4,7 @@ Rails.application.routes.draw do
   get '/search/:query' => 'static_pages#search', :as => 'search'
 
   get 'sessions/new'
-
-
   get '/artist',        to: 'catalog#artist'
-
-  # posts routes
-  get '/artist.:mbid/posts',                to: 'posts#index', as: 'posts'
-  get '/artist.:mbid/posts/new',            to: 'posts#new', as: 'new_post'
-  post '/artist.:mbid/posts',               to: 'posts#create', as: 'create_post'
-  delete '/artist.:mbid/posts/:id',         to: 'posts#destroy', as: 'delete_post'
-  get '/artist.:mbid/posts/:id',              to: 'posts#show', as: 'post'
-
   get '/release-group', to: 'catalog#release_group'
   get 'recording',      to: 'catalog#recording'\
 
@@ -32,9 +22,22 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :posts do
-    resources :comments
-  end
+  # posts routes
+  get '/artist.:mbid/posts',                to: 'posts#index', as: 'posts'
+  get '/artist.:mbid/posts/new',            to: 'posts#new', as: 'new_post'
+  post '/artist.:mbid/posts',               to: 'posts#create', as: 'create_post'
+  delete '/artist.:mbid/posts/:id',         to: 'posts#destroy', as: 'delete_post'
+  get '/artist.:mbid/posts/:id',              to: 'posts#show', as: 'post'
+  get '/artist.:mbid/posts/:id/edit',       to: 'posts#edit', as: 'edit_post'
+  patch '/artist.:mbid/posts/:id/edit',           to: 'posts#update', as: 'update_post'
+
+  # post comments routes
+  get '/artist.:mbid/posts/:post_id/comments',     to: 'comments#index', as: 'post_comments'
+  get '/artist.:mbid/posts/:post_id/comments/new', to: 'comments#new', as: 'new_post_comment'
+  post '/artist.:mbid/posts/:post_id/comments',    to: 'comments#create', as: 'create_post_comment'
+  delete '/artist.:mbid/posts/:post_id/comments/:id', to: 'comments#destroy', as: 'delete_post_comment'
+  get '/artist.:mbid/posts/:post_id/comments/:id', to: 'comments#show', as: 'post_comment'
+
 
   resources :comments do
     resources :comments

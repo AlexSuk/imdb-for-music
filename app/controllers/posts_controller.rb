@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+
   def create
     @post = current_user.posts.create(post_params)
     respond_to do |format|
@@ -29,10 +30,26 @@ class PostsController < ApplicationController
     end
   end
 
+  # TODO: need edit method
+  def edit
+    @post = current_user.posts.find(params[:id])
+  end
+
+  def update
+    @post = current_user.posts.find(params[:id])
+
+    if @post.update(post_params)
+      redirect_to posts_path(id: @post.id), notice: "Your post was successfully edited"
+    else
+      render edit_post_path, notice: 'Your edit did not got through'
+    end
+
+  end
+
   def destroy
     @post.destroy
     flash[:success] = "Post destroyed"
-    redirect_to request.referrer || root_url
+    redirect_to user_url(current_user)
   end
 
 

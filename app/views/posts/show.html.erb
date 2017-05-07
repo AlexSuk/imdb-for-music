@@ -1,5 +1,6 @@
 <!-- design taken from tutorial: https://www.codementor.io/ruby-on-rails/tutorial/threaded-comments-polymorphic-associations -->
 <%= link_to(@post.title, @post.url, target: "_blank") %><br/>
+
 <p>
   <%= @post.body %>
   <%= User.find_by_id(@post.user_id).name %>
@@ -10,7 +11,8 @@
 
 <p>
   <% if current_user == User.find_by_id(@post.user_id) %>
-    <%= link_to "delete", @post, method: :delete, data: { Confirm: "Are you sure?"} %>
+    <%= link_to "edit", edit_post_path %>
+    <%= link_to "delete", method: :delete, data: { Confirm: "Are you sure?"} %>
   <% end %>
 <p>
 
@@ -19,9 +21,10 @@
 <ul>
   <%= render(partial: 'comments/comment', collection: @post.comments) %>
   <div id="post_comment_form">
-    <%= form_for [@post, Comment.new] do |f| %>
-    <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
-    <%= f.submit "Reply" %>
+    <%  %>
+    <%= form_for post_comments_path(post_id: params[:id]) do |f| %>
+      <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
+      <%= f.submit "Reply" %>
   <% end %>
 </div>
 </ul>
