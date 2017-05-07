@@ -106,11 +106,15 @@ class Artist
         case relation["type"]
         when "allmusic"
           puts "allmusic"
-          doc = Nokogiri::HTML(open(url))
-          # parse for allmusic.com
-          if doc.css(".artist-image").count != 0
-            imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
-            @imgurls << imgurl
+          begin
+            doc = Nokogiri::HTML(open(url,'User-Agent' => 'firefox'))
+            # parse for allmusic.com
+            if doc.css(".artist-image").count != 0
+              imgurl = doc.css(".artist-image").children.css("img").attribute("src").value
+              @imgurls << imgurl
+            end
+          rescue
+            puts "skipped"
           end
           puts "exit allmusic"
           # TODO -- can we get all images in lightbox gallery?

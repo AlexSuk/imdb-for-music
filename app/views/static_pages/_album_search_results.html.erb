@@ -3,25 +3,17 @@
   <table>
     <tr>
       <th>Name</th>
-      <th>Release Date</th>
       <th>Artist</th>
-      <th>Thumbnail</th>
       <th>Type</th>
     </tr>
 
     <% @albums.each do |album| %>
       <tr>
         <td><%= link_to album["title"], release_group_path(album["id"]) %></td>
-        <td><%=
-        #release_group = MusicBrainz::ReleaseGroup.find(album[:id])
-        #release_group.first_release_date
-        %>
-        </td>
         <td>
-          <%= album["artist-credit"].first["artist"]["name"] %>
+          <%= link_to album["artist-credit"].first["artist"]["name"], album["artist-credit"].first["artist"]["id"]  %>
         </td>
-        <td><%= 'todo' %></td>
-        <td><%= album["type"] %></td>
+        <td><%= album["primary-type"] %></td>
       </tr>
     <%end %>
   </table>

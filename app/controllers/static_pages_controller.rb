@@ -11,9 +11,18 @@ class StaticPagesController < ApplicationController
   # search results page
   def search
     @query = params[:q] + " "
-    @artists = SearchModule.search("artist", @query)
-    @albums = SearchModule.search("release-group", @query)
-    @recordings = SearchModule.search("recording", @query)
+    @filter = params[:filter]
+    if @filter == "Artist" || @filter == "Any"
+      @artists = SearchModule.search("artist", @query)
+    end
+
+    if @filter == "Release" || @filter == "Any"
+      @albums = SearchModule.search("release-group", @query)
+    end
+
+    if @filter == "Recording" || @filter == "Any"
+      @recordings = SearchModule.search("recording", @query)
+    end
   end
 
   def test

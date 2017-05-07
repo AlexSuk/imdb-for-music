@@ -16,4 +16,13 @@ module MeloCache
     $redis.exists key
   end
 
+  def MeloCache.delete key
+    puts "redisDelete"
+    $redis.del key
+  end
+
+  def MeloCache.ping
+    $redis.ping
+  end
+
 end

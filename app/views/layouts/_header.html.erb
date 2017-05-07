@@ -3,7 +3,8 @@
     <%= link_to image_tag("transparent-logo.png", id: "logo", border: 0), root_path, id: "logo-link"%>
     <%= form_tag(search_path(:q), method: :get) do %>
       <%= text_field_tag :q, params[:name], placeholder: "Search Music", id: "searchbar", class: "left" %>
-      <%= submit_tag "Submit", id: "searchbutton" %>
+      <%= select_tag "filter", "<option>Any</option><option>Artist</option><option>Release</option><option>Recording</option>".html_safe %>
+      <%= submit_tag "Search", id: "searchbutton" %>
     <% end %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
