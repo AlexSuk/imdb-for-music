@@ -42,7 +42,6 @@ require 'json'
 				path = ""
 				if type == "release-group"
 					path = type + "/?query=release:" + string
-					byebug
 				else
 					path = type + "/?query=" + string
 				end
