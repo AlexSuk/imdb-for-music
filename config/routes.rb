@@ -31,13 +31,9 @@ Rails.application.routes.draw do
   get '/artist.:mbid/posts/:id/edit',       to: 'posts#edit', as: 'edit_post'
   patch '/artist.:mbid/posts/:id/edit',           to: 'posts#update', as: 'update_post'
 
-  # post comments routes
-  get '/artist.:mbid/posts/:post_id/comments',     to: 'comments#index', as: 'post_comments'
-  get '/artist.:mbid/posts/:post_id/comments/new', to: 'comments#new', as: 'new_post_comment'
-  post '/artist.:mbid/posts/:post_id/comments',    to: 'comments#create', as: 'create_post_comment'
-  delete '/artist.:mbid/posts/:post_id/comments/:id', to: 'comments#destroy', as: 'delete_post_comment'
-  get '/artist.:mbid/posts/:post_id/comments/:id', to: 'comments#show', as: 'post_comment'
-
+  resources :posts do
+    resources :comments
+  end
 
   resources :comments do
     resources :comments

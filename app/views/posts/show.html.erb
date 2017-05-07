@@ -22,7 +22,7 @@
   <%= render(partial: 'comments/comment', collection: @post.comments) %>
   <div id="post_comment_form">
     <%  %>
-    <%= form_for post_comments_path(post_id: params[:id]) do |f| %>
+    <%= form_for [@post, Comment.new] do |f| %>
       <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
       <%= f.submit "Reply" %>
   <% end %>
