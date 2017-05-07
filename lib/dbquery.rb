@@ -1,5 +1,3 @@
-
-#require 'byebug'
 require 'uri'
 require 'net/http'
 require 'json'
