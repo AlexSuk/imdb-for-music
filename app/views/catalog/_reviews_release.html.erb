@@ -1,0 +1,14 @@
+<h3>Reviews on <%= @release_group.name %></h3>
+<table>
+  <tr>
+    <th> Rating </th>
+    <th> Review </th>
+  </tr>
+</table>
+
+<% @reviews.each do |review| %>
+  <p>
+    <%= review.rating %>
+    <%= review.review %>
+  </p>
+<% end %>

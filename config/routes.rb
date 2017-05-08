@@ -18,6 +18,12 @@ Rails.application.routes.draw do
   post 'users/add_favorite'
   post 'users/remove_favorite'
 
+  post '/reviews/write_review'
+  get '/reviews/write_review'
+  get '/reviews/show', to: 'reviews#show'
+  post '/reviews/create'
+
+
   match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
 
   resources :users

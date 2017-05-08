@@ -1,1 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  m_category: MyString
+  link: MyString
+  name: MyString
+  rating: 1
+  review: MyText
+
+two:
+  user_id: 1
+  m_category: MyString
+  link: MyString
+  name: MyString
+  rating: 1
+  review: MyText

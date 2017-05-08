@@ -1,5 +1,7 @@
 <% provide(:title, @release_group.name) %>
-<%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'] }, :method=>:post %>
+<%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @release_group.name  }, :method=>:post %>
+<%= button_to 'Rate & Review', {:controller => "reviews", :action => "write_review", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @release_group.name }, :method=>:post %>
+
 <h1> <%= @release_group.name %>
   <%
   date = nil
@@ -8,6 +10,7 @@
   %>
   (<%= date %>)</h1>
 <h3>By <%= link_to @release_group.artist["name"], artist_path(@release_group.artist["id"]) %></h3>
+<h4>Avg Rating: <%=@avgRating%> My Rating: <%=@userRating%></h4>
 
 <div class="row">
   <div class="col-lg-6">
@@ -17,3 +20,6 @@
     <%= render 'release_group_tracklist' %>
   </div>
 </div>
+
+
+<%= render 'reviews_release' %>

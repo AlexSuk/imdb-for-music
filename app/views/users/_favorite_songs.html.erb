@@ -1,0 +1,12 @@
+<h2>Favorite Songs</>
+<table>
+<% @favoriteSongs.each do |fav| %>
+    <tr>
+      <td><%= link_to fav.name, fav.link %></td>
+      <td>
+        <% flash.each do |key, value| %> <div class="flash <%= key %>"><%= value %></div> <% end %>
+        <%= button_to 'x   ', {:controller => "users", :action => "remove_favorite", :user_id=> fav.user_id,  :link=> fav.link }, :method=>:post %>
+      </td>
+    </tr>
+  <% end %>
+</table>

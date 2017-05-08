@@ -1,6 +1,11 @@
 <% provide(:title, @recording.name) %>
 <h1><%= @recording.name %></h1>
 <h3>By <%= link_to @recording.artist["name"], artist_path(@recording.artist["id"]) %></h3>
-<%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "song", :user_id => session[:user_id], :link => request.env['PATH_INFO'] }, :method=>:post %>
+<h4>Avg Rating: <%=@avgRating%> My Rating: <%=@userRating%></h4>
+<%= button_to 'Favorite', {:controller => "users", :action => "add_favorite", :m_category => "song", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @recording.name  }, :method=>:post %>
+<%= button_to 'Rate & Review', {:controller => "reviews", :action => "write_review", :m_category => "song", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @recording.name  }, :method=>:post %>
+
 
 <%= render 'recording_appearances' %>
+
+<%= render 'reviews_recording' %>

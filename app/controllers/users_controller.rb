@@ -12,17 +12,20 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     p = params
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
     @loggedUser = User.find_by(id: session[:user_id])
-    if @loggedUser.nil?
+    showFavorites = 1
+    if @loggedUser.nil? || @user.nil?
       redirect_to root_url
+      showFavorites = 0
     elsif @user.id != @loggedUser.id
       redirect_to 'users/#{@loggedUser.id}'
     end
-    @favoriteArtists = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'artist'", "#{@user.id}")
-    @favoriteAlbums = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'album'", "#{@user.id}")
-    @favoriteSongs = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'song'", "#{@user.id}")
-
+    if showFavorites == 1
+      @favoriteArtists = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'artist'", "#{@user.id}")
+      @favoriteAlbums = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'album'", "#{@user.id}")
+      @favoriteSongs = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'song'", "#{@user.id}")
+    end
   end
 
   # GET /users/new
@@ -83,6 +86,7 @@ class UsersController < ApplicationController
     fav.user_id = params[:user_id]
     fav.link = params[:link]
     fav.m_category = params[:m_category]
+    fav.name = params[:name]
     fav.save!
   end
 
@@ -104,7 +108,7 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find_by(id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
