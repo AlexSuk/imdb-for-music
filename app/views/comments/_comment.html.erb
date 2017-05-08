@@ -4,19 +4,26 @@ threaded-comments-polymorphic-associations
 -->
 
 <li>
+  <p>
+    <% user = User.find_by_id(comment.user_id) %>
+    <%= link_to(user.name, user) %>
+    <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago </small>
+  </p>
+  <p>
   <%= comment.body %>
-  <%= User.find_by_id(comment.user_id).name %>
-  <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago </small>
+  </p>
   <!-- <div id="replyComment"><a href="#">Reply to comment</a></div> -->
+  <p>
   <ul>
     <%= render partial: 'comments/comment', collection: comment.comments %>
     <div id="comment_comment_form">
       <%= form_for [comment, Comment.new] do |f| %>
-      <%= f.text_area :body, placeholder: "Add a Reply" %>
-      <%= f.submit "Reply" %>
+      <%= f.text_area :body, placeholder: "Add a comment" %>
+      <%= f.submit "Comment" %>
       <% end %>
     </div>
   </ul>
+  </p>
 </li>
 
 <!--

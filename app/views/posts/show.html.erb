@@ -1,35 +1,45 @@
 <!-- design taken from tutorial: https://www.codementor.io/ruby-on-rails/tutorial/threaded-comments-polymorphic-associations -->
-<%= link_to(@post.title, @post.url, target: "_blank") %><br/>
 
+<section class='color3'>
+<div id='post'>
+<h3><%= link_to(@post.title, @post.url, target: "_blank") %><br/></h3>
 <p>
-  <%= @post.body %>
-  <%= User.find_by_id(@post.user_id).name %>
+  <% user = User.find_by_id(@post.user_id) %>
+  <%= link_to(user.name, user) %>
+  <!-- count post comments (include embedded comments) -->
   <small>Submitted <%= time_ago_in_words(@post.created_at) %> ago</small>
-<!--  <div id="replyPost"><a href="#">Reply to post</a></div> -->
-</p>
-
-
-<p>
   <% if current_user == User.find_by_id(@post.user_id) %>
     <%= link_to "edit", edit_post_path %>
     <%= link_to "delete", method: :delete, data: { Confirm: "Are you sure?"} %>
   <% end %>
 <p>
+<p>
+  <%= @post.body %>
 
-<h4>Comments</h4>
+  <!--<div id="replyPost"><a href="#">Reply to post</a></div> -->
+</p>
 
-<ul>
-  <%= render(partial: 'comments/comment', collection: @post.comments) %>
+
+
   <div id="post_comment_form">
-    <%  %>
     <%= form_for [@post, Comment.new] do |f| %>
       <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
       <%= f.submit "Reply" %>
   <% end %>
+  </div>
 </div>
-</ul>
+</section>
 
-<!--
+
+<section class='color2'>
+<h3>Comments</h3>
+
+<ul>
+  <%= render(partial: 'comments/comment', collection: @post.comments) %>
+</ul>
+</section>
+
+
 <script>
 $(function() {
     $("#replyPost").click(function() {
@@ -37,4 +47,3 @@ $(function() {
     });
 });
 </script>
--->

@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
-//= require galleria-1.5.6.min 
+//= require galleria-1.5.6.min
 //= require_tree .
