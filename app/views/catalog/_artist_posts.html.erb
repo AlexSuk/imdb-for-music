@@ -12,7 +12,7 @@
 </p>
 <% @posts.each do |post| %>
   <p>
-    <%= link_to(post.title, post.url, target: "_blank") %>
+    <%= link_to post.title, post_path(id: post.id, mbid: @artist.id) %>
     <%= post.comments.length %>
     <%= post.created_at %>,
     <%= User.find_by_id(post.user_id).name %>
