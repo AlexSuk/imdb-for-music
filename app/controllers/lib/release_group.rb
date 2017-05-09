@@ -42,6 +42,7 @@ class ReleaseGroup
   def tracklist
     releases = @release_group_data["releases"]
     if releases.count > 0
+      tracklist = get_best_release(releases)["media"].first["tracks"]
       return get_best_release(releases)["media"].first["tracks"]
     else
       return []
