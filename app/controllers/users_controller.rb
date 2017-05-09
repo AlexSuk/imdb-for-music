@@ -54,44 +54,29 @@ class UsersController < ApplicationController
     end
   end
 
-=begin
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
-  def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-
-  # DELETE /users/1
-  # DELETE /users/1.json
-  def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-=end
-
   def add_favorite
-    fav = Favorite.new
-    fav.user_id = params[:user_id]
-    fav.link = params[:link]
-    fav.m_category = params[:m_category]
-    fav.name = params[:name]
-    fav.save!
+    fav = Favorite.where("user_id = ? AND link = ?", "#{params[:user_id]}", "#{params[:link]}")
+    if (fav.length == 0)
+      fav = Favorite.new
+      fav.user_id = params[:user_id]
+      fav.link = params[:link]
+      fav.m_category = params[:m_category]
+      fav.name = params[:name]
+      fav.save!
+      flash[:success] = fav.name + ' added to favorites'
+      redirect_to(:back)
+    else
+      flash[:danger] = "This is already in your favorites!"
+      redirect_to(:back)
+    end
   end
 
   def remove_favorite
-    Favorite.where("user_id = ? AND link = ?", "#{params[:user_id]}", "#{params[:link]}").destroy_all
+    fav = Favorite.where("user_id = ? AND link = ?", "#{params[:user_id]}", "#{params[:link]}")
+    fav_name = fav.first.name
+    fav.destroy_all
+    flash[:success] = fav_name + ' removed from favorites'
+    redirect_to(:back)
   end
 
   def self.from_omniauth(auth)

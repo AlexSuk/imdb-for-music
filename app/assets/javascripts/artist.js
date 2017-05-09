@@ -1,6 +1,6 @@
 // galleria code for artist images
-(function() {
-    //if (document.getElementsByClassName("galleria").length > 0) {
-      Galleria.run('.galleria');
-    //}
-}());
+window.onload = function () {
+  if (document.getElementsByClassName("galleria").length > 0) {
+    Galleria.run('.galleria');
+  }
+}

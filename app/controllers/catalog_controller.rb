@@ -12,32 +12,27 @@ class CatalogController < ApplicationController
 
   def release_group
     @release_group = ReleaseGroup.new(params["format"])
-    @avgRating = Review.where("reviews.link = ?", "/release-group.#{@release_group.id}").average(:rating)
-    @userRating = Review.where("reviews.link = ? AND reviews.user_id = ?", "/release-group.#{@release_group.id}", session[:user_id]).pluck(:rating).first
-    if @avgRating.nil?
-      @avgRating = "Not Rated"
-    else
-      @avgRating = @avgRating.round(1)
-    end
-    if @userRating.nil?
-      @userRating = "Not Rated"
-    end
+    @posts = Post.where("mbid = ?", @release_group.artist["id"]).paginate(page: params[:page])
+    @ratings_hash = get_rating_data(@release_group)
     @reviews = Review.where("reviews.link = ?", "/release-group.#{@release_group.id}")
   end
 
   def recording
     @recording = Recording.new(params["format"])
-    @avgRating = Review.where("reviews.link = ?", "/recording.#{@recording.id}").average(:rating)
-    @userRating = Review.where("reviews.link = ? AND reviews.user_id = ?", "/recording.#{@recording.id}", session[:user_id]).pluck(:rating).first
-    if @avgRating.nil?
-      @avgRating = "Not Rated"
-    else
-      @avgRating = @avgRating.round(1)
-    end
-    if @userRating.nil?
-      @userRating = "Not Rated"
-    end
+    @posts = Post.where("mbid = ?", @recording.artist["id"]).paginate(page: params[:page])
+    @ratings_hash = get_rating_data(@recording)
     @reviews = Review.where("reviews.link = ?", "/recording.#{@recording.id}")
+  end
+
+  private
+
+  def get_rating_data entity
+    hash = {:avg=> nil, :user=> nil}
+    avg = Review.where("reviews.link = ?", "/recording.#{entity.id}").average(:rating)
+    user = Review.where("reviews.link = ? AND reviews.user_id = ?", "/recording.#{entity.id}", session[:user_id]).pluck(:rating).first
+    hash[:avg] = avg == nil ? "Not Rated" : avg.round(1)
+    hash[:user] = user == nil ? "Not Rated" : user
+    return hash
   end
 
 end

@@ -95,7 +95,6 @@ class Artist
 
   # Get image urls for this artist from url relations
   # Returns array of image urls
-  # TODO limit number of images (to limit TooManyHTTPRequests errors)
   def images_fetch
     url_relations = get_relations(self.relations, "url")
     @imgurls = []
@@ -126,36 +125,6 @@ class Artist
             @imgurls << imgurl
           end
           puts "exit bandsintown"
-=begin
-        when "discogs"
-          # This site has  very low threshold for htttp request volume
-
-          doc = Nokogiri::HTML(open(url))
-          # parse for discogs.com
-          gallery_url = ""
-          if doc.css(".image_gallery_more").count != 0
-            gallery_url = "https://www.discogs.com" +
-                        doc.css(".image_gallery_more").children.css("a").attribute("href").value
-          elsif doc.css(".image_gallery").count != 0
-            gallery_url = "https://www.discogs.com" +
-                        doc.css(".image_gallery").css("a").attribute("href").value
-          end
-
-          if gallery_url != ""
-            doc = Nokogiri::HTML(open(gallery_url))
-            gallery = doc.css('[id="view_images"]').children.css("p")
-            if gallery.first.children.css("img").count != 0
-              imgurl = gallery.first.css("img").attribute("src").value
-              @imgurls << imgurl
-            end
-            gallery.each do |element|
-              if (element.children.css("img").count != 0)
-                imgurl = element.css("img").attribute("src").value
-                @imgurls << imgurl
-              end
-            end
-          end
-=end
         when "last.fm"
           # parse for last.fm
         when "myspace"
@@ -172,7 +141,6 @@ class Artist
     end
     puts "images fetch return"
     return @imgurls
-    # TODO check for duplicate images, maybe use phasion https://github.com/westonplatter/phashion
   end
 
   private
