@@ -4,11 +4,11 @@
     <th> Rating </th>
     <th> Review </th>
   </tr>
-</table>
 
 <% @reviews.each do |review| %>
-  <p>
-    <%= review.rating %>
-    <%= review.review %>
-  </p>
+  <tr>
+    <td><%= review.rating %></td>
+    <td><%= review.review %></td>
+  </tr>
 <% end %>
+</table>

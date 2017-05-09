@@ -1,6 +1,6 @@
 <!-- design taken from tutorial: https://www.codementor.io/ruby-on-rails/tutorial/threaded-comments-polymorphic-associations -->
 
-<h4><%= link_to "Back to artist", :back %> </h4>
+<h4><%= link_to "Back to artist", artist_path(@post.mbid) %> </h4>
   <section class='color3'>
     <div id='post'>
       <h3><%= @post.title %><br/></h3>
