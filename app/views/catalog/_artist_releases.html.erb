@@ -6,6 +6,7 @@
         <th>Title</th>
         <th>Year</th>
         <th>Type</th>
+        <th>Rating</th>
       </tr>
 
       <% @artist.release_groups.each do |release_group|%>
@@ -15,6 +16,7 @@
             <td> <%= release_group["secondary-types"].empty? ?
             release_group["primary-type"] :
             release_group["secondary-types"].first %> </td>
+            <td><%= Review.where("reviews.link = ?", "/release-group.#{release_group["id"]}").average(:rating)%></td>
           </tr>
       <%end %>
     </table>
