@@ -2,7 +2,7 @@
 <%= @user.name %>, <%= @user.email %>
 </h1>
 <p>
-<%= button_to "Edit Profile", edit_user_path(@user) %>
+<%= link_to "Edit Profile", edit_user_path(@user) %>
 </p>
 
 <%= render 'favorite_artists' %>
