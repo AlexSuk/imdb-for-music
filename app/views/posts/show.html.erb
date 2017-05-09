@@ -2,29 +2,27 @@
 
 <section class='color3'>
 <div id='post'>
-<h3><%= link_to(@post.title, @post.url, target: "_blank") %><br/></h3>
+<h3><%= link_to(@post.title, post_path(mbid: @post.mbid), target: "_blank") %><br/></h3>
 <p>
-  <% user = User.find_by_id(@post.user_id) %>
-  <%= link_to(user.name, user) %>
-  <!-- count post comments (include embedded comments) -->
-  <small>Submitted <%= time_ago_in_words(@post.created_at) %> ago</small>
+  <small>
+    <% user = User.find_by_id(@post.user_id) %>
+    <%= link_to(user.name, user) %>
+    <!-- count post comments (include embedded comments) -->
+    Submitted <%= time_ago_in_words(@post.created_at) %> ago
+  </small>
   <% if current_user == User.find_by_id(@post.user_id) %>
-    <%= link_to "edit", edit_post_path %>
+    <%= link_to "edit", edit_post_path(mbid: @post.mbid) %>
     <%= link_to "delete", method: :delete, data: { Confirm: "Are you sure?"} %>
   <% end %>
 <p>
 <p>
   <%= @post.body %>
-
   <!--<div id="replyPost"><a href="#">Reply to post</a></div> -->
 </p>
-
-
-
   <div id="post_comment_form">
     <%= form_for [@post, Comment.new] do |f| %>
-      <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
-      <%= f.submit "Reply" %>
+      <%= f.text_area :body, placeholder: "Add a Comment" %><br/>
+      <%= f.submit "Comment" %>
   <% end %>
   </div>
 </div>
@@ -39,7 +37,7 @@
 </ul>
 </section>
 
-
+<!--
 <script>
 $(function() {
     $("#replyPost").click(function() {
@@ -47,3 +45,4 @@ $(function() {
     });
 });
 </script>
+-->
