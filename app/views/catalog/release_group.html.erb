@@ -1,6 +1,4 @@
 <% provide(:title, @release_group.name) %>
-<%= button_to 'Save', {:controller => "users", :action => "add_favorite", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @release_group.name  }, :method=>:post %>
-<%= button_to 'Rate & Review', {:controller => "reviews", :action => "write_review", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @release_group.name }, :method=>:post %>
 
 <h1> <%= @release_group.name %>
   <%
@@ -9,8 +7,12 @@
   date = dmy[0] unless dmy[0] == nil
   %>
   (<%= date %>)</h1>
+
+<%= button_to 'Favorite', {:controller => "users", :action => "add_favorite", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @release_group.name  }, :method=>:post, :class=>"left" %>
+<%= button_to 'Rate & Review', {:controller => "reviews", :action => "write_review", :m_category => "album", :user_id => session[:user_id], :link => request.env['PATH_INFO'], :name => @release_group.name }, :method=>:post, :class=>"left"  %>
+
 <h3>By <%= link_to @release_group.artist["name"], artist_path(@release_group.artist["id"]) %></h3>
-<h4>Avg Rating: <%=@avgRating%> My Rating: <%=@userRating%></h4>
+<h4>Avg Rating: <%=@ratings_hash[:avg]%> My Rating: <%=@ratings_hash[:user]%></h4>
 
 <div class="row">
   <div class="col-lg-6">
@@ -23,3 +25,5 @@
 
 
 <%= render 'reviews_release' %>
+
+<%= render 'release_group_posts' %>
