@@ -2,10 +2,8 @@
 
 one:
   user_id: 1
-  type: 
   link: MyString
 
 two:
   user_id: 1
-  type: 
   link: MyString
