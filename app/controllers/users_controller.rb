@@ -11,16 +11,21 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    p = params
+    #p = params
     @user = User.find_by(id: params[:id])
     @loggedUser = User.find_by(id: session[:user_id])
+
+
     showFavorites = 1
-    if @loggedUser.nil? || @user.nil?
+
+    if @loggedUser.nil? && @user.nil?
       redirect_to root_url
       showFavorites = 0
-    elsif @user.id != @loggedUser.id
+
+    elsif @user.id.nil? && @loggedUser.id
       redirect_to 'users/#{@loggedUser.id}'
     end
+
     if showFavorites == 1
       @favoriteArtists = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'artist'", "#{@user.id}")
       @favoriteAlbums = Favorite.where("favorites.user_id = ? AND favorites.m_category = 'album'", "#{@user.id}")

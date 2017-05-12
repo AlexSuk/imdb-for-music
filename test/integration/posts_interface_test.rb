@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class PostsInterfaceTest < ActionDispatch::IntegrationTest
+=begin
   def setup
     @user = users(:jose)
   end
@@ -43,4 +44,5 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
     # Can't delete other users' comments
     # Comment on other user's post
   end
+=end
 end
